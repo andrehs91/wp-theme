@@ -24,7 +24,7 @@
                 'container_class' => 'navbar-collapse collapse text-center',
                 'container_id'    => 'navbarScroll',
                 'menu_class'      => 'navbar-nav',
-                'items_wrap'      => '<ul id="%1$s" class="nav-link %2$s">%3$s</ul>',
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'theme_location'  => 'top'
             )
         );
