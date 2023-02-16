@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap">
+<link rel="stylesheet" href="<?= get_theme_file_uri( '/assets/css/bootstrap.css' ); ?>">
 <?php wp_head(); ?>
 </head>
 
@@ -31,9 +32,9 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'larissa' ); ?></a>
-    <header id="masthead" class="header-container">
+    <header class="header-container">
         <?php get_template_part( 'template-parts/header/header', 'header' ); ?>
-    </header><!-- #masthead -->
+    </header>
     <?php
     /*
      * If a regular post or page, and not the front page, show the featured image.

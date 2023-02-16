@@ -44,5 +44,6 @@
     </div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<script src="<?= get_theme_file_uri( '/assets/js/bootstrap.js' ); ?>"></script>
 </body>
 </html>
