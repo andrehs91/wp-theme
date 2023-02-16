@@ -56,11 +56,10 @@ endif;
 
 if ( ! function_exists( 'larissa_post_author' ) ) :
     function larissa_post_author() {
-        $author_string = '<span class="post-author" title="Autora"><a href="%1$s">%2$s</a></span>';
+        $author_string = '<span class="post-author" title="Autora">%1$s</span>';
         $author_string = sprintf(
             $author_string,
-            the_author_posts_link(),
-            get_the_author()
+            the_author_posts_link()
         );
         return sprintf(
             /* translators: %s: Post date. */
