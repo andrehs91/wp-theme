@@ -661,4 +661,4 @@ function li_nav_link( $classes, $item, $args, $depth ) {
     }
     return $classes;
 }
-add_filter( 'nav_menu_css_class', 'li_nav_item', 1, 4 );
+add_filter( 'nav_menu_css_class', 'li_nav_link', 1, 4 );
