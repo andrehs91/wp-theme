@@ -507,7 +507,7 @@ function larissa_scripts() {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
+// TESTE add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
 
 /**
  * Enqueues styles for the block-based editor.
@@ -520,7 +520,7 @@ function larissa_block_editor_styles() {
     // Add custom fonts.
     wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
 }
-add_action( 'enqueue_block_editor_assets', 'larissa_block_editor_styles' );
+// TESTE add_action( 'enqueue_block_editor_assets', 'larissa_block_editor_styles' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
