@@ -31,8 +31,10 @@
     ?>
 </nav>
 <div class="header-title">
-    <h1><?= get_the_title(); ?></h1>
     <?php if ( is_front_page() ) : ?>
+        <h1>Início</h1>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
+    <?php else : ?>
+        <h1><?= get_the_title(); ?></h1>
     <?php endif; ?>
 </div>
