@@ -34,7 +34,7 @@
     <?php if ( is_front_page() ) : ?>
         <h1>Início</h1>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
-    <?php else : ?>
+    <?php elseif ( is_page() || is_archive() ) : ?>
         <h1><?= get_the_title(); ?></h1>
     <?php endif; ?>
 </div>
