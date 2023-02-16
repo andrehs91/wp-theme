@@ -30,11 +30,13 @@
         );
     ?>
 </nav>
-<div class="header-title">
-    <?php if ( is_front_page() ) : ?>
+<?php if ( is_front_page() ) : ?>
+    <div class="header-title">
         <h1>Início</h1>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
-    <?php elseif ( is_page() || is_archive() ) : ?>
+    </div>
+<?php elseif ( is_page() || is_archive() ) : ?>
+    <div class="header-title">
         <h1><?= get_the_title(); ?></h1>
-    <?php endif; ?>
-</div>
+    </div>
+<?php endif; ?>
