@@ -259,15 +259,6 @@ function larissa_content_width() {
     // Get layout.
     $page_layout = get_theme_mod( 'page_layout' );
 
-    // Check if layout is one column.
-    if ( 'one-column' === $page_layout ) {
-        if ( larissa_is_frontpage() ) {
-            $content_width = 644;
-        } elseif ( is_page() ) {
-            $content_width = 740;
-        }
-    }
-
     // Check if is single post and there is no sidebar.
     if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) ) {
         $content_width = 740;
