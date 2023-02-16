@@ -34,5 +34,5 @@
     <h1><?= get_the_title(); ?></h1>
     <?php if ( is_front_page() ) : ?>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
-    <?php else : ?>
+    <?php endif; ?>
 </div>
