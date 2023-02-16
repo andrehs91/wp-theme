@@ -30,14 +30,9 @@
         );
     ?>
 </nav>
-<?php if ( is_front_page() ) : ?>
-    <div class="header-title">
-        <h1><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">Início</a></h1>
+<div class="header-title">
+    <h1><?= get_the_title(); ?></h1>
+    <?php if ( is_front_page() ) : ?>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
-    </div>
-<?php elseif ( is_page() ) : ?>
-    <h1>Página</h1>
-<?php elseif ( is_archive() ) : ?>
-    <h1>Arquivo</h1>
-<?php else : ?>
-<?php endif; ?>
+    <?php else : ?>
+</div>
