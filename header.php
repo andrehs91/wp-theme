@@ -28,23 +28,10 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="bg-light">
 <?php wp_body_open(); ?>
-<div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'larissa' ); ?></a>
     <header class="header-container">
         <?php get_template_part( 'template-parts/header/header', 'header' ); ?>
     </header>
-    <?php
-    /*
-     * If a regular post or page, and not the front page, show the featured image.
-     * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-     */
-    if ( ( is_single() || ( is_page() && ! larissa_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-        echo '<div class="single-featured-image-header">';
-        echo get_the_post_thumbnail( get_queried_object_id(), 'larissa-featured-image' );
-        echo '</div><!-- .single-featured-image-header -->';
-    endif;
-    ?>
-    <div class="site-content-contain">
-        <div id="content" class="site-content">
+    <main class="container">
