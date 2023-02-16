@@ -575,6 +575,28 @@ function larissa_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'larissa_widget_tag_cloud_args' );
 
 /**
+ * Customização dos itens do menu de navegação
+ */
+function li_nav_item( $classes, $item, $args, $depth ) {
+    if( 'top' === $args->theme_location && $depth === 3) {
+        $classes[] = 'nav-item';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'li_nav_item', 1, 4 );
+
+/**
+ * Customização dos links do menu de navegação
+ */
+function li_nav_link( $classes, $item, $args, $depth ) {
+    if( 'top' === $args->theme_location && $depth === 4) {
+        $classes[] = 'nav-link';
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'li_nav_link', 1, 4 );
+
+/**
  * Gets unique ID.
  *
  * This is a PHP implementation of Underscore's uniqueId method. A static variable
@@ -640,14 +662,3 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
  * Block Patterns.
  */
 require get_template_directory() . '/inc/block-patterns.php';
-
-/**
- * Customização dos itens do menu de navegação
- */
-function li_nav_item( $classes, $item, $args, $depth ) {
-    if( 'top' === $args->theme_location && $depth === 3) {
-        $classes[] = 'nav-item';
-    }
-    return $classes;
-}
-add_filter( 'nav_menu_css_class', 'li_nav_item', 1, 3 );
