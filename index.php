@@ -32,7 +32,7 @@ get_header();
                     * called content-___.php (where ___ is the Post Format name) and that
                     * will be used instead.
                     */
-                get_template_part( 'template-parts/post/content', get_post_format() );
+                get_template_part( 'template-parts/post/content', 'excerpt' );
             endwhile;
             the_posts_pagination(
                 array(
