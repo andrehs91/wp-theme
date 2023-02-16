@@ -46,7 +46,7 @@ if ( ! function_exists( 'larissa_time_link' ) ) :
         //     get_the_modified_date()
         // );
 
-        $time_string = '<time class="post-date entry-date published" datetime="%1$s" title="Data de Publicação">%2$s</time>';
+        $time_string = '<time datetime="%1$s" title="Data de Publicação">%2$s</time>';
         $time_string = sprintf(
             $time_string,
             get_the_date( DATE_W3C ),
@@ -57,7 +57,7 @@ if ( ! function_exists( 'larissa_time_link' ) ) :
         return sprintf(
             /* translators: %s: Post date. */
             __( '<span class="screen-reader-text">Posted on</span> %s', 'larissa' ),
-            'em ' . $time_string
+            '<div class="post-date">em ' . $time_string . '</div>'
         );
     }
 endif;
