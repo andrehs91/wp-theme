@@ -117,13 +117,9 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
     white-space: nowrap;
 }
 .nav-link:hover,
-.nav-link.active {
+.current_page_item .nav-link {
     color: #ffffff !important;
     background-color: rgba(255, 255, 255, 0.2);
-}
-.dropdown-item.active i,
-.dropdown-item:active i {
-    color: #ffffff !important;
 }
 
 main,
