@@ -67,7 +67,7 @@ function larissa_setup() {
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(
         array(
-            'top'    => __( 'Top Menu', 'larissa' ),
+            'top'    => __( 'Menu Superior', 'larissa' ),
             'social' => __( 'Social Links Menu', 'larissa' ),
         )
     );
@@ -209,7 +209,7 @@ function larissa_setup() {
         'nav_menus'   => array(
             // Assign a menu to the "top" location.
             'top'    => array(
-                'name'  => __( 'Top Menu', 'larissa' ),
+                'name'  => __( 'Menu Superior', 'larissa' ),
                 'items' => array(
                     'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
                     'page_about',
@@ -464,48 +464,6 @@ function larissa_scripts() {
     if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
         wp_enqueue_style( 'larissa-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'larissa-style' ), '20191025' );
     }
-
-    // Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-    if ( is_customize_preview() ) {
-        wp_enqueue_style( 'larissa-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'larissa-style' ), '20161202' );
-        wp_style_add_data( 'larissa-ie9', 'conditional', 'IE 9' );
-    }
-
-    // Load the Internet Explorer 8 specific stylesheet.
-    wp_enqueue_style( 'larissa-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'larissa-style' ), '20161202' );
-    wp_style_add_data( 'larissa-ie8', 'conditional', 'lt IE 9' );
-
-    // Load the html5 shiv.
-    wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '20161020' );
-    wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-    wp_enqueue_script( 'larissa-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '20161114', true );
-
-    // $larissa_l10n = array(
-    //     'quote' => larissa_get_svg( array( 'icon' => 'quote-right' ) ),
-    // );
-
-    // if ( has_nav_menu( 'top' ) ) {
-    //     wp_enqueue_script( 'larissa-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210122', true );
-    //     $larissa_l10n['expand']   = __( 'Expand child menu', 'larissa' );
-    //     $larissa_l10n['collapse'] = __( 'Collapse child menu', 'larissa' );
-    //     $larissa_l10n['icon']     = larissa_get_svg(
-    //         array(
-    //             'icon'     => 'angle-down',
-    //             'fallback' => true,
-    //         )
-    //     );
-    // }
-
-    // wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
-
-    // wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.3', true );
-
-    // wp_localize_script( 'larissa-skip-link-focus-fix', 'larissaScreenReaderText', $larissa_l10n );
-
-    // if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    //     wp_enqueue_script( 'comment-reply' );
-    // }
 }
 add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
 

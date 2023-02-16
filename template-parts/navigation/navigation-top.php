@@ -10,7 +10,7 @@
  */
 
 ?>
-<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'larissa' ); ?>">
+<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Menu Superior', 'larissa' ); ?>">
     <button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
         <?php
         echo larissa_get_svg( array( 'icon' => 'bars' ) );
