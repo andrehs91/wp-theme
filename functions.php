@@ -120,11 +120,11 @@ function larissa_setup() {
     // Add theme support for selective refresh for widgets.
     add_theme_support( 'customize-selective-refresh-widgets' );
 
-    /*
-     * This theme styles the visual editor to resemble the theme style,
-     * specifically font, colors, and column width.
-      */
-    add_editor_style( array( 'assets/css/editor-style.css', larissa_fonts_url() ) );
+    // /*
+    //  * This theme styles the visual editor to resemble the theme style,
+    //  * specifically font, colors, and column width.
+    //   */
+    // add_editor_style( array( 'assets/css/editor-style.css', larissa_fonts_url() ) );
 
     // Load regular editor styles into the new block-based editor.
     add_theme_support( 'editor-styles' );
@@ -284,34 +284,34 @@ function larissa_content_width() {
 }
 add_action( 'template_redirect', 'larissa_content_width', 0 );
 
-/**
- * Register custom fonts.
- */
-function larissa_fonts_url() {
-    $fonts_url = '';
+// /**
+//  * Register custom fonts.
+//  */
+// function larissa_fonts_url() {
+//     $fonts_url = '';
 
-    /*
-     * translators: If there are characters in your language that are not supported
-     * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
-     */
-    $libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'larissa' );
+//     /*
+//      * translators: If there are characters in your language that are not supported
+//      * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
+//      */
+//     $libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'larissa' );
 
-    if ( 'off' !== $libre_franklin ) {
-        $font_families = array();
+//     if ( 'off' !== $libre_franklin ) {
+//         $font_families = array();
 
-        $font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+//         $font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
 
-        $query_args = array(
-            'family'  => urlencode( implode( '|', $font_families ) ),
-            'subset'  => urlencode( 'latin,latin-ext' ),
-            'display' => urlencode( 'fallback' ),
-        );
+//         $query_args = array(
+//             'family'  => urlencode( implode( '|', $font_families ) ),
+//             'subset'  => urlencode( 'latin,latin-ext' ),
+//             'display' => urlencode( 'fallback' ),
+//         );
 
-        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-    }
+//         $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+//     }
 
-    return esc_url_raw( $fonts_url );
-}
+//     return esc_url_raw( $fonts_url );
+// }
 
 /**
  * Add preconnect for Google Fonts.
@@ -451,8 +451,8 @@ add_action( 'wp_head', 'larissa_colors_css_wrap' );
  * Enqueues scripts and styles.
  */
 function larissa_scripts() {
-    // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
+    // // Add custom fonts, used in the main stylesheet.
+    // wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
 
     // Theme stylesheet.
     wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20221101' );
@@ -481,31 +481,31 @@ function larissa_scripts() {
 
     wp_enqueue_script( 'larissa-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '20161114', true );
 
-    $larissa_l10n = array(
-        'quote' => larissa_get_svg( array( 'icon' => 'quote-right' ) ),
-    );
+    // $larissa_l10n = array(
+    //     'quote' => larissa_get_svg( array( 'icon' => 'quote-right' ) ),
+    // );
 
-    if ( has_nav_menu( 'top' ) ) {
-        wp_enqueue_script( 'larissa-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210122', true );
-        $larissa_l10n['expand']   = __( 'Expand child menu', 'larissa' );
-        $larissa_l10n['collapse'] = __( 'Collapse child menu', 'larissa' );
-        $larissa_l10n['icon']     = larissa_get_svg(
-            array(
-                'icon'     => 'angle-down',
-                'fallback' => true,
-            )
-        );
-    }
+    // if ( has_nav_menu( 'top' ) ) {
+    //     wp_enqueue_script( 'larissa-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210122', true );
+    //     $larissa_l10n['expand']   = __( 'Expand child menu', 'larissa' );
+    //     $larissa_l10n['collapse'] = __( 'Collapse child menu', 'larissa' );
+    //     $larissa_l10n['icon']     = larissa_get_svg(
+    //         array(
+    //             'icon'     => 'angle-down',
+    //             'fallback' => true,
+    //         )
+    //     );
+    // }
 
-    wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
+    // wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
 
-    wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.3', true );
+    // wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.3', true );
 
-    wp_localize_script( 'larissa-skip-link-focus-fix', 'larissaScreenReaderText', $larissa_l10n );
+    // wp_localize_script( 'larissa-skip-link-focus-fix', 'larissaScreenReaderText', $larissa_l10n );
 
-    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-        wp_enqueue_script( 'comment-reply' );
-    }
+    // if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    //     wp_enqueue_script( 'comment-reply' );
+    // }
 }
 // TESTE add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
 
@@ -517,8 +517,8 @@ function larissa_scripts() {
 function larissa_block_editor_styles() {
     // Block styles.
     wp_enqueue_style( 'larissa-block-editor-style', get_theme_file_uri( '/assets/css/editor-blocks.css' ), array(), '20220912' );
-    // Add custom fonts.
-    wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
+    // // Add custom fonts.
+    // wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
 }
 // TESTE add_action( 'enqueue_block_editor_assets', 'larissa_block_editor_styles' );
 
