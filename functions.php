@@ -655,10 +655,10 @@ add_filter( 'nav_menu_css_class', 'li_nav_item', 1, 3 );
 /**
  * Customização dos links do menu de navegação
  */
-function li_nav_link( $classes, $item, $args, $depth ) {
-    if( 'top' === $args->theme_location) {
-        $classes[] = 'nav-link';
-    }
-    return $classes;
-}
-add_filter( 'nav_menu_css_class', 'li_nav_link', 1, 4 );
+// function li_nav_link( $classes, $item, $args, $depth ) {
+//     if( 'top' === $args->theme_location) {
+//         $classes[] = 'nav-link';
+//     }
+//     return $classes;
+// }
+// add_filter( 'nav_menu_css_class', 'li_nav_link', 1, 4 );
