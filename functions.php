@@ -285,6 +285,35 @@ function larissa_content_width() {
 add_action( 'template_redirect', 'larissa_content_width', 0 );
 
 /**
+ * Register custom fonts.
+ */
+function larissa_fonts_url() {
+    $fonts_url = '';
+
+    /*
+     * translators: If there are characters in your language that are not supported
+     * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
+     */
+    $libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'larissa' );
+
+    if ( 'off' !== $libre_franklin ) {
+        $font_families = array();
+
+        $font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+
+        $query_args = array(
+            'family'  => urlencode( implode( '|', $font_families ) ),
+            'subset'  => urlencode( 'latin,latin-ext' ),
+            'display' => urlencode( 'fallback' ),
+        );
+
+        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+    }
+
+    return esc_url_raw( $fonts_url );
+}
+
+/**
  * Add preconnect for Google Fonts.
  *
  * @since Larissa 1.0
@@ -422,20 +451,76 @@ add_action( 'wp_head', 'larissa_colors_css_wrap' );
  * Enqueues scripts and styles.
  */
 function larissa_scripts() {
-    // Bootstrap.
-    wp_enqueue_style( 'bootstrap-style', get_theme_file_uri( '/assets/css/bootstrap.css' ), array(), '20230216' );
-    wp_enqueue_script( 'bootstrap-script', get_theme_file_uri( '/assets/js/bootstrap.js' ), array(), '20230216', true );
+    // Add custom fonts, used in the main stylesheet.
+    wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
 
     // Theme stylesheet.
-    wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20230216' );
+    wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20221101' );
 
-    // Other.
-    wp_enqueue_script( 'larissa-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '20230216', true );
+    // Theme block stylesheet.
+    wp_enqueue_style( 'larissa-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'larissa-style' ), '20220912' );
+
+    // Load the dark colorscheme.
+    if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
+        wp_enqueue_style( 'larissa-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'larissa-style' ), '20191025' );
+    }
+
+    // Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
+    if ( is_customize_preview() ) {
+        wp_enqueue_style( 'larissa-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'larissa-style' ), '20161202' );
+        wp_style_add_data( 'larissa-ie9', 'conditional', 'IE 9' );
+    }
+
+    // Load the Internet Explorer 8 specific stylesheet.
+    wp_enqueue_style( 'larissa-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'larissa-style' ), '20161202' );
+    wp_style_add_data( 'larissa-ie8', 'conditional', 'lt IE 9' );
+
+    // Load the html5 shiv.
+    wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '20161020' );
+    wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
+
+    wp_enqueue_script( 'larissa-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '20161114', true );
+
+    $larissa_l10n = array(
+        'quote' => larissa_get_svg( array( 'icon' => 'quote-right' ) ),
+    );
+
+    if ( has_nav_menu( 'top' ) ) {
+        wp_enqueue_script( 'larissa-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210122', true );
+        $larissa_l10n['expand']   = __( 'Expand child menu', 'larissa' );
+        $larissa_l10n['collapse'] = __( 'Collapse child menu', 'larissa' );
+        $larissa_l10n['icon']     = larissa_get_svg(
+            array(
+                'icon'     => 'angle-down',
+                'fallback' => true,
+            )
+        );
+    }
+
+    wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
+
+    wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.3', true );
+
+    wp_localize_script( 'larissa-skip-link-focus-fix', 'larissaScreenReaderText', $larissa_l10n );
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
+// TESTE add_action( 'wp_enqueue_scripts', 'larissa_scripts' );
+
+/**
+ * Enqueues styles for the block-based editor.
+ *
+ * @since Larissa 1.8
+ */
+function larissa_block_editor_styles() {
+    // Block styles.
+    wp_enqueue_style( 'larissa-block-editor-style', get_theme_file_uri( '/assets/css/editor-blocks.css' ), array(), '20220912' );
+    // Add custom fonts.
+    wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
+}
+// TESTE add_action( 'enqueue_block_editor_assets', 'larissa_block_editor_styles' );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
