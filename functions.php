@@ -588,13 +588,13 @@ add_filter( 'nav_menu_css_class', 'li_nav_item', 10, 4 );
 /**
  * Customização dos links do menu de navegação
  */
-function li_nav_link( $classes, $item, $args, $depth ) {
+function li_nav_link( $atts, $item, $args ) {
     if( 'top' === $args->theme_location) {
-        $classes[] = 'nav-link';
+        $atts['class'] = "nav-link";
     }
-    return $classes;
+    return $atts;
 }
-add_filter( 'nav_menu_css_class', 'li_nav_link', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'li_nav_link', 10, 3 );
 
 /**
  * Gets unique ID.
