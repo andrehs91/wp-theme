@@ -26,7 +26,7 @@
             if ( is_single() ) {
                 larissa_posted_on();
             } else {
-                echo larissa_time_link();
+                echo larissa_post_date();
                 larissa_edit_link();
             }
             echo '</div><!-- .entry-meta -->';

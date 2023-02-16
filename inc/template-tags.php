@@ -24,40 +24,47 @@ if ( ! function_exists( 'larissa_posted_on' ) ) :
         );
 
         // Finally, let's write all of this to the page.
-        echo '<span class="posted-on">' . larissa_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+        echo '<span class="posted-on">' . larissa_post_date() . '</span><span class="byline"> ' . $byline . '</span>';
     }
 endif;
 
-
-if ( ! function_exists( 'larissa_time_link' ) ) :
-    /**
-     * Gets a nicely formatted string for the published date.
-     */
-    function larissa_time_link() {
-        // $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+if ( ! function_exists( 'larissa_post_date' ) ) :
+    function larissa_post_date() {
+        // $date_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         // if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-        //     $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+        //     $date_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
         // }
-        // $time_string = sprintf(
-        //     $time_string,
+        // $date_string = sprintf(
+        //     $date_string,
         //     get_the_date( DATE_W3C ),
         //     get_the_date(),
         //     get_the_modified_date( DATE_W3C ),
         //     get_the_modified_date()
         // );
-
-        $time_string = '<time datetime="%1$s" title="Data de Publicação">%2$s</time>';
-        $time_string = sprintf(
-            $time_string,
+        $date_string = '<time datetime="%1$s" title="Data de Publicação">%2$s</time>';
+        $date_string = sprintf(
+            $date_string,
             get_the_date( DATE_W3C ),
             get_the_date()
         );
+        return sprintf(
+            __( '<span class="screen-reader-text">Posted on</span> %s', 'larissa' ),
+            '<div class="post-date">em ' . $date_string . '</div>'
+        );
+    }
+endif;
 
-        // Wrap the time string in a link, and preface it with 'Posted on'.
+if ( ! function_exists( 'larissa_post_author' ) ) :
+    function larissa_post_author() {
+        $author_string = '<span class="post-author" title="Autora"><a href="#">%1$s</a></span>';
+        $author_string = sprintf(
+            $author_string,
+            get_the_author()
+        );
         return sprintf(
             /* translators: %s: Post date. */
-            __( '<span class="screen-reader-text">Posted on</span> %s', 'larissa' ),
-            '<div class="post-date">em ' . $time_string . '</div>'
+            __( '<span class="screen-reader-text">Written by</span> %s', 'larissa' ),
+            '<div class="post-author">Escrito por ' . $author_string . '</div>'
         );
     }
 endif;
