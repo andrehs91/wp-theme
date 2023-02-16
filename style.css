@@ -139,19 +139,19 @@ footer {
     background-position: center bottom;
 }
 
-.menu-item {
+.sidemenu-item {
     margin-bottom: 2rem;
 }
-.menu-item ul {
+.sidemenu-item ul {
     padding: 0;
     list-style: none;
     list-style-image: none;
 }
-.menu-item li {
+.sidemenu-item li {
     padding-left: 0.5rem;
     line-height: 2rem;
 }
-.menu-item li:not(:last-child) {
+.sidemenu-item li:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
