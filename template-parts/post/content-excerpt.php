@@ -20,7 +20,7 @@
         <?php
             $categories = get_the_category();
             foreach ($categories as $category) {
-                $category_link = get_category_link($category->cat_ID);
+                $category_link = get_category_link($category);
                 echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
             }
         ?>
@@ -48,9 +48,6 @@
     <div class="post-tags" title="Marcações">
         <?php
             $tags = get_the_tags();
-            echo '<pre>';
-            print_r($tags);
-            echo '</pre>';
             foreach ($tags as $tag) {
                 $tag_link = get_the_tags($tag);
                 echo '<a href="' . esc_url($tag_link) . '" title="Categoria ' . esc_attr($tag->name) . '">' . esc_html($tag->name) . '</a>';
