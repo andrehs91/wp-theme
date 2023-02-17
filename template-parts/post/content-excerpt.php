@@ -48,6 +48,7 @@
     <div class="post-tags" title="Marcações">
         <?php
             $tags = get_the_tags();
+            print_r($tags);
             foreach ($tags as $tag) {
                 $tag_link = get_the_tags($tag->cat_ID);
                 echo '<a href="' . esc_url($tag_link) . '" title="Categoria ' . esc_attr($tag->name) . '">' . esc_html($tag->name) . '</a>';
