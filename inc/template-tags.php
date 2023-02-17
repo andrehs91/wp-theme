@@ -41,7 +41,7 @@ if ( ! function_exists( 'larissa_post_date' ) ) :
         //     get_the_modified_date( DATE_W3C ),
         //     get_the_modified_date()
         // );
-        $date_string = '<time datetime="%1$s" title="Data de Publicação">%2$s</time>';
+        $date_string = '<time datetime="%1$s" title="Data da publicação">%2$s</time>';
         $date_string = sprintf(
             $date_string,
             get_the_date( DATE_W3C ),

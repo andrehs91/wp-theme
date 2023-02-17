@@ -17,12 +17,18 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-summary">
     <span class="post-category"><a href="#" title="Categoria"><?= get_the_category(); ?></a></span>
+    <pre>
+        <?php
+        print_r(get_the_category());
+        ?>
+    </pre>
     <?php
-    if ( is_front_page() && ! is_home() ) {
-        the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
-    } else {
-        the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-    }
+    // if ( is_front_page() && ! is_home() ) {
+    //     the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+    // } else {
+    //     the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+    // }
+    the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
     ?>
     <?php if ( 'post' === get_post_type() ) : ?>
         <?= larissa_post_author(); ?>
