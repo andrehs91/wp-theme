@@ -17,7 +17,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-summary">
     <span class="post-category"><a href="#" title="Categoria"><?= get_the_category()[0]->name; ?></a></span>
-    <?php get_category_link(get_the_category()[0]); ?>
+    <?php get_category_link(get_the_category()[0->cat_ID]); ?>
     <pre>
         <?php
         print_r(get_the_category());
