@@ -41,7 +41,9 @@
         <?php larissa_edit_link(); ?>
     <?php endif; ?>
 
-    <?php the_excerpt(); ?>
+    <div class="post-excerpt">
+        <?php the_excerpt(); ?>
+    </div>
 
     <div class="post-tags" title="Marcações">
         <?php

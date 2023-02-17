@@ -369,27 +369,8 @@ function larissa_widgets_init() {
 }
 add_action( 'widgets_init', 'larissa_widgets_init' );
 
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with ... and
- * a 'Continue reading' link.
- *
- * @since Larissa 1.0
- *
- * @param string $link Link to single post/page.
- * @return string 'Continue reading' link prepended with an ellipsis.
- */
 function larissa_excerpt_more( $link ) {
-    if ( is_admin() ) {
-        return $link;
-    }
-
-    $link = sprintf(
-        '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-        esc_url( get_permalink( get_the_ID() ) ),
-        /* translators: %s: Post title. Only visible to screen readers. */
-        sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'larissa' ), get_the_title( get_the_ID() ) )
-    );
-    return ' &hellip; ' . $link;
+    return '';
 }
 add_filter( 'excerpt_more', 'larissa_excerpt_more' );
 

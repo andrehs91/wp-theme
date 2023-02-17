@@ -193,6 +193,9 @@ footer {
 .post-tags {
     margin-bottom: 1rem;
 }
+.post-excerpt p {
+  margin: 0 !important;
+}
 .post-tags a {
     margin-right: 0.5rem;
 }
