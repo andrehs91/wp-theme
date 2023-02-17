@@ -25,11 +25,9 @@
     }
     ?>
     <?php if ( 'post' === get_post_type() ) : ?>
-            <?php
-            echo larissa_post_author();
-            echo larissa_post_date();
-            larissa_edit_link();
-            ?>
+        <?= larissa_post_author(); ?>
+        <?= larissa_post_date(); ?>
+        <?php larissa_edit_link();?>
     <?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
         <?php larissa_edit_link(); ?>
     <?php endif; ?>

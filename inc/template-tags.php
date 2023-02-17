@@ -56,12 +56,9 @@ endif;
 
 if ( ! function_exists( 'larissa_post_author' ) ) :
     function larissa_post_author() {
-        $author_string = the_author_posts_link();
-        return sprintf(
-            /* translators: %s: Post date. */
-            __( '<span class="screen-reader-text">Written by</span> %s', 'larissa' ),
-            '<div class="post-author">Escrito por <span class="post-author" title="Autora">' . $author_string . '</span></div>'
-        );
+        echo __( '<span class="screen-reader-text">Written by</span><div class="post-author">Escrito por ', 'larissa' );
+        the_author_posts_link();
+        echo '</div>';
     }
 endif;
 
