@@ -53,7 +53,7 @@
         ?>
     </div>
     <div class="post-button">
-        <?php sprintf( '<a class="btn btn-outline-primary" href="%s" rel="bookmark"Continuar Lendo</a>', esc_url( get_permalink() ) ); ?>
+        <a class="btn btn-outline-primary" href="<?= esc_url( get_permalink( get_the_ID() ) ) ?>">Continuar Lendo</a>
     </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
