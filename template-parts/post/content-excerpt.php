@@ -21,15 +21,10 @@
             $categories = get_the_category();
             foreach ($categories as $category) {
                 $category_link = get_category_link($category->cat_ID);
-                echo '<a href="' . esc_url($category_link) . '" title="' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
+                echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
             }
         ?>
     </span>
-    <pre>
-        <?php
-        print_r(get_the_category());
-        ?>
-    </pre>
     <?php
     // if ( is_front_page() && ! is_home() ) {
     //     the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
