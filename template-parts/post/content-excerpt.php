@@ -16,8 +16,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="post-summary">
-    <span class="post-category"><a href="#" title="Categoria"><?= get_the_category()[0]->name; ?></a></span>
-    <?php get_category_link(get_the_category()[0]->cat_ID); ?>
+    <span class="post-category">
+        <?php
+            $categories = get_the_category();
+            foreach ($categories as $category) {
+                $category_link = get_category_link($category->cat_ID);
+                echo '<a href="' . esc_url($category_link) . '" title="' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
+            }
+        ?>
+    </span>
     <pre>
         <?php
         print_r(get_the_category());
