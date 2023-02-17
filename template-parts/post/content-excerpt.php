@@ -41,9 +41,7 @@
         <?php larissa_edit_link(); ?>
     <?php endif; ?>
 
-    <div class="entry-summary">
-        <?php the_excerpt(); ?>
-    </div><!-- .entry-summary -->
+    <?php the_excerpt(); ?>
 
     <div class="post-tags" title="Marcações">
         <?php
@@ -53,6 +51,9 @@
                 echo '<a href="' . esc_url($tag_link) . '" title="Categoria ' . esc_attr($tag->name) . '">' . esc_html($tag->name) . '</a>';
             }
         ?>
+    </div>
+    <div class="post-button">
+        <?php sprintf( '<a class="btn btn-outline-primary" href="%s" rel="bookmark"Continuar Lendo</a>', esc_url( get_permalink() ) ); ?>
     </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
