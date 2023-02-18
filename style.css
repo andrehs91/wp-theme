@@ -202,7 +202,9 @@ aside .widget_block li:not(:last-child) {
 .post-author-date {
     margin-bottom: 2rem;
 }
-.post-author,
+.post-author {
+    display: inline-block;
+}
 .post-date {
     display: inline-block;
     margin-bottom: 1rem;
