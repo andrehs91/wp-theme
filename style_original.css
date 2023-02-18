@@ -15312,14 +15312,14 @@ footer {
     padding: 2rem;
     background-color: #ffffff;
 }
-.post-summary {
+.post-excerpt {
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 0.5rem;
     background-color: #ffffff;
 }
 
-.post-summary:last-of-type {
+.post-excerpt:last-of-type {
     margin-bottom: 2rem;
 }
 .post-category {

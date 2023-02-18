@@ -15,7 +15,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post-summary">
+<article id="post-<?php the_ID(); ?>" class="post-excerpt">
     <span class="post-category">
         <?php
             $categories = get_the_category();
@@ -35,7 +35,7 @@
     <?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
         <?php larissa_edit_link(); ?>
     <?php endif; ?>
-    <div class="post-excerpt">
+    <div class="post-content">
         <?php the_excerpt(); ?>
     </div>
     <div class="post-tags" title="Marcações">

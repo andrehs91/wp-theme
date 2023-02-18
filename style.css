@@ -177,15 +177,14 @@ footer {
     padding: 2rem;
     background-color: #ffffff;
 }
-.post-summary {
-    margin-top: 2rem;
-    padding: 2rem;
+.post-excerpt {
+    margin-top: 1rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     background-color: #ffffff;
 }
-
-.post-summary:last-of-type {
-    margin-bottom: 2rem;
+.post-excerpt:last-of-type {
+    margin-bottom: 1rem;
 }
 .post-category {
     display: block;
@@ -194,11 +193,11 @@ footer {
     margin-bottom: 1rem;
 }
 .post-title,
-.post-excerpt,
+.post-content,
 .post-tags {
     margin-bottom: 1rem;
 }
-.post-excerpt p {
+.post-content p {
   margin: 0 !important;
 }
 .post-tags a {
@@ -283,6 +282,14 @@ footer {
     }
 
     #searchform {
+        margin-bottom: 2rem;
+    }
+
+    .post-excerpt {
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+    .post-excerpt:last-of-type {
         margin-bottom: 2rem;
     }
 }
