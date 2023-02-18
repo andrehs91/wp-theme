@@ -146,8 +146,8 @@ aside {
     background-position: center bottom;
 }
 
-.aside-menu-item {
-    margin-bottom: 2rem;
+.aside-menu-item:not(:last-of-type){
+    margin-bottom: 1rem;
 }
 .aside-menu-item ul {
     padding: 0;
@@ -281,6 +281,10 @@ aside {
     footer {
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+
+    .aside-menu-item:not(:last-of-type){
+        margin-bottom: 2rem;
     }
 
     #searchform {
