@@ -139,19 +139,19 @@ footer {
     background-position: center bottom;
 }
 
-aside .widget_block {
+.aside-menu-item {
     margin-bottom: 2rem;
 }
-aside .widget_block ul {
+.aside-menu-item ul {
     padding: 0;
     list-style: none;
     list-style-image: none;
 }
-aside .widget_block li {
+.aside-menu-item li {
     padding-left: 0.5rem;
     line-height: 2rem;
 }
-aside .widget_block li:not(:last-child) {
+.aside-menu-item li:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 

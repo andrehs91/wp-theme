@@ -139,7 +139,7 @@ function larissa_setup() {
     $starter_content = array(
         'widgets'     => array(
             // Place three core-defined widgets in the sidebar area.
-            'sidebar-1' => array(
+            'menu-lateral' => array(
                 'text_business_info',
                 'search',
                 'text_about',
@@ -260,7 +260,7 @@ function larissa_content_width() {
     $page_layout = get_theme_mod( 'page_layout' );
 
     // Check if is single post and there is no sidebar.
-    if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) ) {
+    if ( is_single() && ! is_active_sidebar( 'menu-lateral' ) ) {
         $content_width = 740;
     }
 
@@ -333,13 +333,33 @@ add_filter( 'wp_resource_hints', 'larissa_resource_hints', 10, 2 );
 function larissa_widgets_init() {
     register_sidebar(
         array(
-            'name'          => __( 'Blog Sidebar', 'larissa' ),
-            'id'            => 'sidebar-1',
-            'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'larissa' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
+            'name'          => __( 'Menu Lateral', 'larissa' ),
+            'id'            => 'menu-lateral',
+            'description'   => __( 'Menu lateral.', 'larissa' ),
+            'before_widget' => '<div id="%1$s" class="aside-menu-item">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="title-decoration">',
+            'after_title'   => '</h3>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Anúncio 1', 'larissa' ),
+            'id'            => 'anuncio-1',
+            'description'   => __( 'Anúncio antes do conteúdo.', 'larissa' ),
+            'before_widget' => '<div class="googleads-container">',
+            'after_widget'  => '</div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Anúncio 2', 'larissa' ),
+            'id'            => 'anuncio-2',
+            'description'   => __( 'Anúncio depois do conteúdo.', 'larissa' ),
+            'before_widget' => '<div class="googleads-container">',
+            'after_widget'  => '</div>'
         )
     );
 
@@ -351,7 +371,19 @@ function larissa_widgets_init() {
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
+            'after_title'   => '</h2>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer 2', 'larissa' ),
+            'id'            => 'sidebar-3',
+            'description'   => __( 'Add widgets here to appear in your footer.', 'larissa' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>'
         )
     );
 
@@ -470,7 +502,7 @@ function larissa_content_image_sizes_attr( $sizes, $size ) {
         $sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
     }
 
-    if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+    if ( is_active_sidebar( 'menu-lateral' ) || is_archive() || is_search() || is_home() || is_page() ) {
         if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
             $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
         }

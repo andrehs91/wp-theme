@@ -30,8 +30,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'larissa' ); ?></a>
     <header class="header-container">
         <?php get_template_part( 'template-parts/header/header', 'header' ); ?>
     </header>
-    <main class="container">
+    <div id="container" class="row g-0">

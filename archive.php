@@ -14,28 +14,27 @@
 get_header();
 ?>
 
-<div class="wrap">
+<main class="col-12 col-lg-9">
     <?php if ( have_posts() ) : ?>
-        <header class="page-header">
-            <?php
-                the_archive_title( '<h1 class="page-title">', '</h1>' );
-                the_archive_description( '<div class="taxonomy-description">', '</div>' );
-            ?>
-        </header><!-- .page-header -->
+    <header class="page-header">
+        <?php
+            the_archive_title( '<h1 class="page-title">', '</h1>' );
+            the_archive_description( '<div class="taxonomy-description">', '</div>' );
+        ?>
+    </header><!-- .page-header -->
     <?php endif; ?>
     <div id="primary" class="content-area">
-        <main id="main" class="site-main">
         <?php
         if ( have_posts() ) :
             // Start the Loop.
             while ( have_posts() ) :
                 the_post();
                 /*
-                 * Include the Post-Format-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Format name) and that
-                 * will be used instead.
-                 */
+                * Include the Post-Format-specific template for the content.
+                * If you want to override this in a child theme, then include a file
+                * called content-___.php (where ___ is the Post Format name) and that
+                * will be used instead.
+                */
                 get_template_part( 'template-parts/post/content', get_post_format() );
             endwhile;
             the_posts_pagination(
@@ -49,10 +48,11 @@ get_header();
             get_template_part( 'template-parts/post/content', 'none' );
         endif;
         ?>
-        </main><!-- #main -->
-    </div><!-- #primary -->
+    </div>
+</main>
+<aside class="col-12 col-lg-3 ps-lg-4">
     <?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</aside>
 
 <?php
 get_footer();

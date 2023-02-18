@@ -38,17 +38,6 @@ endif;
 
 if ( ! function_exists( 'larissa_post_date' ) ) :
     function larissa_post_date() {
-        // $date_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-        // if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-        //     $date_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-        // }
-        // $date_string = sprintf(
-        //     $date_string,
-        //     get_the_date( DATE_W3C ),
-        //     get_the_date(),
-        //     get_the_modified_date( DATE_W3C ),
-        //     get_the_modified_date()
-        // );
         $date_string = '<time datetime="%1$s" title="Data da publicação">%2$s</time>';
         $date_string = sprintf(
             $date_string,

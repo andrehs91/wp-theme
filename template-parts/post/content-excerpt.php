@@ -25,14 +25,7 @@
             }
         ?>
     </span>
-    <?php
-    // if ( is_front_page() && ! is_home() ) {
-    //     the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
-    // } else {
-    //     the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-    // }
-    the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-    ?>
+    <?php the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
     <?php if ( 'post' === get_post_type() ) : ?>
         <div>
             <?= larissa_post_author(); ?>
@@ -42,11 +35,9 @@
     <?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
         <?php larissa_edit_link(); ?>
     <?php endif; ?>
-
     <div class="post-excerpt">
         <?php the_excerpt(); ?>
     </div>
-
     <div class="post-tags" title="Marcações">
         <?php
             $tags = get_the_tags();
@@ -59,5 +50,4 @@
     <div class="post-button">
         <a class="btn btn-outline-primary" href="<?= esc_url( get_permalink( get_the_ID() ) ) ?>">Continuar Lendo</a>
     </div>
-
 </article><!-- #post-<?php the_ID(); ?> -->

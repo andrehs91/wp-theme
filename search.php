@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<div class="wrap">
+<main class="col-12 col-lg-9">
     <header class="page-header">
         <?php if ( have_posts() ) : ?>
             <h1 class="page-title">
@@ -28,7 +28,6 @@ get_header();
         <?php endif; ?>
     </header><!-- .page-header -->
     <div id="primary" class="content-area">
-        <main id="main" class="site-main">
         <?php
         if ( have_posts() ) :
             // Start the Loop.
@@ -55,9 +54,11 @@ get_header();
                 get_search_form();
         endif;
         ?>
-        </main><!-- #main -->
-    </div><!-- #primary -->
+    </div>
+</main>
+<aside class="col-12 col-lg-3 ps-lg-4">
     <?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</aside>
+
 <?php
 get_footer();

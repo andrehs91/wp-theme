@@ -14,29 +14,30 @@
 get_header();
 ?>
 
-<div class="wrap">
+<main class="col-12 col-lg-9">
     <div id="primary" class="content-area">
-        <main id="main" class="site-main">
-            <?php
-            // Start the Loop.
-            while ( have_posts() ) :
-                the_post();
-                get_template_part( 'template-parts/post/content', get_post_format() );
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-                the_post_navigation(
-                    array(
-                        'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'larissa' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-                        'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'larissa' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-                    )
-                );
-            endwhile; // End the loop.
-            ?>
-        </main><!-- #main -->
-    </div><!-- #primary -->
+        <?php
+        // Start the Loop.
+        while ( have_posts() ) :
+            the_post();
+            get_template_part( 'template-parts/post/content', get_post_format() );
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+            the_post_navigation(
+                array(
+                    'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'larissa' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+                    'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'larissa' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+                )
+            );
+        endwhile; // End the loop.
+        ?>
+    </div>
+</main>
+<aside class="col-12 col-lg-3 ps-lg-4">
     <?php get_sidebar(); ?>
-</div><!-- .wrap -->
+</aside>
+
 <?php
 get_footer();
