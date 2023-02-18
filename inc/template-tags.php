@@ -48,7 +48,6 @@ if ( ! function_exists( 'larissa_post_date' ) ) :
     }
 endif;
 
-
 if ( ! function_exists( 'larissa_entry_footer' ) ) :
     /**
      * Prints HTML with meta information for the categories, tags and comments.

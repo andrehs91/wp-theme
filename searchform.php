@@ -11,11 +11,9 @@
 
 ?>
 
-<?php $unique_id = esc_attr( larissa_unique_id( 'search-form-' ) ); ?>
-<form role="search" method="get" class="search-form" action="<?= esc_url( home_url( '/' ) ); ?>">
-    <label for="<?= $unique_id; ?>">
-        <span class="screen-reader-text"><?= _x( 'Search for:', 'label', 'larissa' ); ?></span>
-    </label>
-    <input type="search" id="<?= $unique_id; ?>" class="search-field" placeholder="<?= esc_attr_x( 'Search &hellip;', 'placeholder', 'larissa' ); ?>" value="<?= get_search_query(); ?>" name="s" />
-    <button type="submit" class="search-submit"><?= larissa_get_svg( array( 'icon' => 'search' ) ); ?><span class="screen-reader-text"><?= _x( 'Search', 'submit button', 'larissa' ); ?></span></button>
+<form role="search" method="get" class="d-flex" id="searchform" action="<?= esc_url( home_url( '/' ) ); ?>">
+    <input type="search" class="form-control" placeholder="Pesquisar" value="<?= get_search_query(); ?>" name="s" id="s" />
+    <button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-primary ms-2" title="Botão Pesquisar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
 </form>
