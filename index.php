@@ -22,6 +22,11 @@ get_header();
 <main class="col-12 col-lg-9">
     <?php
     get_search_form();
+    if ( is_active_sidebar( 'anuncio-superior' ) ) {
+        dynamic_sidebar( 'anuncio-superior' );
+    } else {
+        ?><div class="alert alert-tertiary" role="alert">O anúncio superior não foi definido.</div><?php
+    }
     if ( have_posts() ) :
         // Start the Loop.
         while ( have_posts() ) :
@@ -44,6 +49,11 @@ get_header();
     else :
         get_template_part( 'template-parts/post/content', 'none' );
     endif;
+    if ( is_active_sidebar( 'anuncio-inferior' ) ) {
+        dynamic_sidebar( 'anuncio-inferior' );
+    } else {
+        ?><div class="alert alert-tertiary" role="alert">O anúncio inferior não foi definido.</div><?php
+    }
     ?>
 </main>
 <aside class="col-12 col-lg-3 ps-lg-4">

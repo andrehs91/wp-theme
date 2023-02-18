@@ -13,6 +13,6 @@
 
 if ( is_active_sidebar( 'menu-lateral' ) ) {
     dynamic_sidebar( 'menu-lateral' );
-} else {
-    echo '<div class="alert alert-tertiary" role="alert">Nenhum menu foi definido.</div>';
-}
+} else { ?>
+    <div class="alert alert-tertiary" role="alert">O menu lateral foi definido.</div>
+<?php }

@@ -345,8 +345,8 @@ function larissa_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __( 'Anúncio 1', 'larissa' ),
-            'id'            => 'anuncio-1',
+            'name'          => __( 'Anúncio Superior', 'larissa' ),
+            'id'            => 'anuncio-superior',
             'description'   => __( 'Anúncio antes do conteúdo.', 'larissa' ),
             'before_widget' => '<div class="googleads-container">',
             'after_widget'  => '</div>'
@@ -355,8 +355,8 @@ function larissa_widgets_init() {
 
     register_sidebar(
         array(
-            'name'          => __( 'Anúncio 2', 'larissa' ),
-            'id'            => 'anuncio-2',
+            'name'          => __( 'Anúncio Inferior', 'larissa' ),
+            'id'            => 'anuncio-inferior',
             'description'   => __( 'Anúncio depois do conteúdo.', 'larissa' ),
             'before_widget' => '<div class="googleads-container">',
             'after_widget'  => '</div>'
