@@ -578,6 +578,20 @@ function li_nav_link( $atts, $item, $args ) {
 add_filter( 'nav_menu_link_attributes', 'li_nav_link', 10, 3 );
 
 /**
+ * Customização do formulário de pesquisa
+ */
+function custom_search_form( $form = [] ) {
+    $form = '<form class="d-flex mb-4" role="search" method="get" id="searchform" action="' . home_url( '/' ) . '">
+        <input type="search" class="form-control" placeholder="Pesquisar" value="' . get_search_query() . '" name="s" id="s" />
+        <button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-primary ms-2" title="Botão Pesquisar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>';
+    return $form;
+}
+add_filter( 'get_search_form', 'custom_search_form', 10, 1);
+
+/**
  * Gets unique ID.
  *
  * This is a PHP implementation of Underscore's uniqueId method. A static variable
