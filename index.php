@@ -22,8 +22,7 @@ get_header();
 <div class="row g-0">
     <div class="col-12 col-lg-9">
         <?php
-        // get_search_form();
-        custom_search_form();
+        get_search_form();
         if ( have_posts() ) :
             // Start the Loop.
             while ( have_posts() ) :

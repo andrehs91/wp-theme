@@ -580,7 +580,7 @@ add_filter( 'nav_menu_link_attributes', 'li_nav_link', 10, 3 );
 /**
  * Customização do formulário de pesquisa
  */
-function custom_search_form( $form = [] ) {
+function custom_search_form( $form ) {
     $form = '<form class="d-flex mb-4" role="search" method="get" id="searchform" action="' . home_url( '/' ) . '">
         <input type="search" class="form-control" placeholder="Pesquisar" value="' . get_search_query() . '" name="s" id="s" />
         <button type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" class="btn btn-primary ms-2" title="Botão Pesquisar">
