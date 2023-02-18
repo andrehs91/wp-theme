@@ -25,7 +25,7 @@ get_header();
     if ( is_active_sidebar( 'anuncio-superior' ) ) {
         dynamic_sidebar( 'anuncio-superior' );
     } else {
-        ?><div class="alert alert-tertiary" role="alert">O anúncio superior não foi definido.</div><?php
+        ?><div class="alert alert-secondary" role="alert">O anúncio superior não foi definido.</div><?php
     }
     if ( have_posts() ) :
         // Start the Loop.
@@ -52,7 +52,7 @@ get_header();
     if ( is_active_sidebar( 'anuncio-inferior' ) ) {
         dynamic_sidebar( 'anuncio-inferior' );
     } else {
-        ?><div class="alert alert-tertiary" role="alert">O anúncio inferior não foi definido.</div><?php
+        ?><div class="alert alert-secondary" role="alert">O anúncio inferior não foi definido.</div><?php
     }
     ?>
 </main>
