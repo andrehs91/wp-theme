@@ -19,7 +19,7 @@
 get_header();
 ?>
 
-<main class="col-12 col-lg-9 bg-white">
+<main class="col-12 col-lg-9 content">
     <?php
     while ( have_posts() ) :
         the_post();
