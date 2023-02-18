@@ -11,8 +11,8 @@
  * @version 1.0
  */
 
-if ( is_active_sidebar( 'menu-lateral' ) ) {
-    dynamic_sidebar( 'menu-lateral' );
+if ( is_active_sidebar( 'sidebar-1' ) ) {
+    dynamic_sidebar( 'sidebar-1' );
 } else {
-    echo '<div class="alert alert-tertiary" role="alert">Nenhum menu foi definido.</div>'
+    echo '<div class="alert alert-tertiary" role="alert">Nenhum menu foi definido.</div>';
 }

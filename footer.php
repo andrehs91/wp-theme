@@ -13,7 +13,8 @@
 
 ?>
 
-    </div><!-- #container -->
+        </div><!-- .row .g-0 -->
+    </div><!-- .container -->
     <footer class="bg-secondary">
         <div class="wrap">
             <?php
