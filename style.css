@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
 }
 .header-title h1 {
     margin: 0 0 1rem 0;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .brand {
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
     display: inline-block;
     color: #ffffff;
     font-family: 'Pacifico', sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
     margin: 0;
@@ -271,6 +271,14 @@ footer {
         margin-left: 0.5rem;
         color: rgba(255, 255, 255, 1);
         border-radius: 0.5rem;
+    }
+
+    .brand a {
+        font-size: 2rem;
+    }
+
+    .header-title h1 {
+        font-size: 4rem;
     }
 
     main,
