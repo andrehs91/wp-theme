@@ -14,7 +14,7 @@
 ?>
 
         </div><!-- .row .g-0 -->
-    </div><!-- .container -->
+    </div><!-- #main-container -->
     <footer class="bg-secondary">
         <div class="wrap">
             <?php

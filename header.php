@@ -33,5 +33,5 @@
     <header class="header-container">
         <?php get_template_part( 'template-parts/header/header', 'header' ); ?>
     </header>
-    <div class="container">
+    <div id="main-container" class="container">
         <div class="row g-0">
