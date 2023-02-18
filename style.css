@@ -122,7 +122,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-#main-container,
+main,
+aside,
 footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -270,7 +271,8 @@ footer {
         border-radius: 0.5rem;
     }
 
-    #main-container,
+    main,
+    aside,
     footer {
         padding-top: 2rem;
         padding-bottom: 2rem;
