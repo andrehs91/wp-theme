@@ -28,6 +28,14 @@ if ( ! function_exists( 'larissa_posted_on' ) ) :
     }
 endif;
 
+if ( ! function_exists( 'larissa_post_author' ) ) :
+    function larissa_post_author() {
+        echo __( 'Escrito por <div class="post-author">', 'larissa' );
+        the_author_posts_link();
+        echo '</div>';
+    }
+endif;
+
 if ( ! function_exists( 'larissa_post_date' ) ) :
     function larissa_post_date() {
         // $date_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -47,18 +55,7 @@ if ( ! function_exists( 'larissa_post_date' ) ) :
             get_the_date( DATE_W3C ),
             get_the_date()
         );
-        return sprintf(
-            __( '<span class="screen-reader-text">Posted on</span> %s', 'larissa' ),
-            '<div class="post-date">em ' . $date_string . '</div>'
-        );
-    }
-endif;
-
-if ( ! function_exists( 'larissa_post_author' ) ) :
-    function larissa_post_author() {
-        echo __( '<span class="screen-reader-text">Written by</span><div class="post-author">Escrito por ', 'larissa' );
-        the_author_posts_link();
-        echo '</div>';
+        return 'em <div class="post-date">' . $date_string . '</div>';
     }
 endif;
 
