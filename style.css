@@ -342,7 +342,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
     }
 
     main {
-        padding-bottom: 2rem;
+        padding-top: 2rem;
     }
     aside,
     footer {
@@ -372,6 +372,6 @@ a.tag-cloud-link[style*="font-size: 2"] {
 
 @media (min-width: 992px) {
     main {
-        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
