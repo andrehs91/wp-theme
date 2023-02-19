@@ -30,10 +30,7 @@ get_header();
             )
         );
     else :
-        ?>
-        <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'larissa' ); ?></p>
-        <?php
-            get_search_form();
+        ?><p><?php _e( 'Desculpe, mas nada corresponde aos seus termos de pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes.', 'larissa' ); ?></p><?php
     endif;
     ?>
 </main>
