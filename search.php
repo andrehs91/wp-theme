@@ -33,7 +33,7 @@ get_header();
             )
         );
     else :
-        ?><p><?php _e( 'Desculpe, mas nada corresponde aos seus termos de pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes.', 'larissa' ); ?></p><?php
+        ?><div class="alert alert-primary m-0" role="alert">Desculpe, mas nada corresponde aos teus termos de pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes.</div><?php
     endif;
     ?>
     <div class="mt-3 mt-md-4">

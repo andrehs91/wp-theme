@@ -52,7 +52,7 @@
     </div>
 <?php elseif ( is_404() ) : ?>
     <div class="header-title">
-        <h1>Ops! A página não pode ser encontrada.</h1>
+        <h1>Ops! A página não pôde ser encontrada.</h1>
     </div>
 <?php endif; ?>
 <div class="header-search container">
