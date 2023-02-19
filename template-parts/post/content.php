@@ -54,10 +54,6 @@
         ?>
     </div><!-- .post-content -->
 
-    <div class="my-3 my-md-4">
-        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
-    </div>
-
     <div class="post-category text-start">
         <span class="fw-bold">Categorias: </span>
         <?php
@@ -67,7 +63,7 @@
             echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
         }
         ?>
-    </div>
+    </div><!-- .post-category -->
     <div class="post-tags text-start" title="Tags">
         <span class="fw-bold">Tags: </span>
         <?php
@@ -77,6 +73,10 @@
             echo '<a href="' . esc_url($tag_link) . '" title="Tag ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
         }
         ?>
+    </div><!-- .post-tags -->
+
+    <div class="my-3 my-md-4">
+        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
     </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
