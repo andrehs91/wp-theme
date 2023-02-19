@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
 .header-search {
     position: relative;
     z-index: 1;
+    margin-bottom: 1rem;
 }
 
 .brand {
@@ -132,10 +133,6 @@ aside,
 footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-#searchform {
-    margin-bottom: 1rem;
 }
 
 main article p:last-of-type {
@@ -337,6 +334,9 @@ a.tag-cloud-link[style*="font-size: 2"] {
     .header-title h1 {
         font-size: 4rem;
     }
+    .header-search {
+        margin-bottom: 2rem;
+    }
 
     main,
     aside,
@@ -346,10 +346,6 @@ a.tag-cloud-link[style*="font-size: 2"] {
     }
 
     .aside-menu-item:not(:last-of-type){
-        margin-bottom: 2rem;
-    }
-
-    #searchform {
         margin-bottom: 2rem;
     }
 
