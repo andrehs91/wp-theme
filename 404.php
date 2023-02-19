@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<main class="col-12 col-lg-9">
+<main class="col-12 col-lg-9 pb-0 pb-lg-4">
     <div class="alert alert-primary" role="alert">404.php</div>
     <div class="alert alert-primary m-0" role="alert">Parece que nada foi encontrado neste local. Que tal fazer uma pesquisa?</div>
 </main>
