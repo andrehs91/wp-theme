@@ -20,7 +20,7 @@
     endif;
     ?>
     <div class="post-header">
-        <?php the_title( '<h1 class="post-title text-primary mb-3 mb-md-4" title="Título da publicação">', '</h1>' ); ?>
+        <?php the_title( '<h1 class="post-title mb-3 mb-md-4" title="Título da publicação">', '</h1>' ); ?>
         <div class="post-author-date">
             <?= larissa_post_author(); ?>
             <?= larissa_post_date(); ?>
