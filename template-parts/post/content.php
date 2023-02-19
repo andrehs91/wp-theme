@@ -42,6 +42,10 @@
         ?>
     </header><!-- .entry-header -->
 
+    <div class="mb-3 mb-md-4">
+        <?php if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' ); ?>
+    </div>
+
     <?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
         <div class="post-thumbnail">
             <a href="<?php the_permalink(); ?>">
@@ -76,5 +80,9 @@
         larissa_entry_footer();
     }
     ?>
+
+    <div class="mt-3 mt-md-4">
+        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
+    </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
