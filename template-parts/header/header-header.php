@@ -46,4 +46,8 @@
             the_archive_description( '<span>', '</span>' );
         ?>
     </div>
+<?php elseif ( is_search() ) : ?>
+    <div class="header-title">
+        <h1><?= get_search_query(); ?></h1>
+    </div>
 <?php endif; ?>
