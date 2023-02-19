@@ -179,7 +179,7 @@ main article p:last-of-type {
 }
 
 .content {
-    padding: 2rem;
+    padding: 1rem;
     background-color: #ffffff;
 }
 .post-excerpt {
@@ -351,6 +351,10 @@ a.tag-cloud-link[style*="font-size: 2"] {
 
     #searchform {
         margin-bottom: 2rem;
+    }
+
+    .content {
+        padding: 2rem;
     }
 
     .post-excerpt {
