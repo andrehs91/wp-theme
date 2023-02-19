@@ -50,6 +50,10 @@
     <div class="header-title">
         <h1>Resultados da busca por: <?= get_search_query(); ?></h1>
     </div>
+<?php elseif ( is_404() ) : ?>
+    <div class="header-title">
+        <h1>Ops! A página não pode ser encontrada.</h1>
+    </div>
 <?php endif; ?>
 <div class="header-search container">
     <?php get_search_form(); ?>
