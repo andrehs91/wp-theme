@@ -48,6 +48,7 @@
     </div>
 <?php elseif ( is_search() ) : ?>
     <div class="header-title">
-        <h1><?= get_search_query(); ?></h1>
+        <h1>Resultados da busca por: <?= get_search_query(); ?></h1>
     </div>
 <?php endif; ?>
+<?php get_search_form(); ?>

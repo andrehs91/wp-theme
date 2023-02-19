@@ -21,7 +21,6 @@ get_header();
 
 <main class="col-12 col-lg-9">
     <?php
-    get_search_form();
     if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' );
     if ( have_posts() ) :
         while ( have_posts() ) :
