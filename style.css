@@ -270,6 +270,7 @@ main article p:last-of-type {
 }
 
 .pagination {
+    font-family: 'Pacifico', cursive;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -288,10 +289,10 @@ main article p:last-of-type {
     font-weight: bold;
     text-decoration: none;
 }
-.pagination .prev,
+/* .pagination .prev,
 .pagination .next {
     font-size: 1.6rem;
-}
+} */
 
 /* Tag Cloud **********************************************************************************************************/
 a.tag-cloud-link[style*="font-size: 8"],
