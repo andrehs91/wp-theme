@@ -39,6 +39,21 @@
         </div><!-- .post-thumbnail -->
     <?php endif; ?>
 
+    <div class="post-content">
+        <?php
+        the_content();
+
+        wp_link_pages(
+            array(
+                'before'      => '<div class="page-links">' . __( 'Pages:', 'larissa' ),
+                'after'       => '</div>',
+                'link_before' => '<span class="page-number">',
+                'link_after'  => '</span>',
+            )
+        );
+        ?>
+    </div><!-- .post-content -->
+
     <div class="my-3 my-md-4">
         <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
     </div>
