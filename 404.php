@@ -15,6 +15,7 @@ get_header();
 ?>
 
 <div class="wrap">
+    <div class="alert alert-primary" role="alert">404.php</div>
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <section class="error-404 not-found">

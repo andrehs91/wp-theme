@@ -15,6 +15,7 @@ get_header();
 ?>
 
 <main class="col-12 col-lg-9">
+    <div class="alert alert-primary" role="alert">single.php</div>
     <div id="primary" class="content-area">
         <?php
         // Start the Loop.

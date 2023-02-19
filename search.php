@@ -15,11 +15,12 @@ get_header();
 ?>
 
 <main class="col-12 col-lg-9">
+    <div class="alert alert-primary" role="alert">search.php</div>
+    <?= var_dump(get_post_type()); ?>
     <header class="page-header">
         <?php if ( have_posts() ) : ?>
             <h1 class="page-title">
             <?php
-            echo get_post_type();
             /* translators: Search query. */
             printf( __( 'Search Results for: %s', 'larissa' ), '<span>' . get_search_query() . '</span>' );
             ?>
