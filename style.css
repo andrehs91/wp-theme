@@ -274,8 +274,7 @@ main article p:last-of-type {
     display: flex;
     justify-content: center;
     align-content: center;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.6rem;
     padding-bottom: 1rem;
 }
 .pagination .page-numbers {
