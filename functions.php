@@ -338,7 +338,7 @@ function larissa_widgets_init() {
             'description'   => __( 'Menu lateral.', 'larissa' ),
             'before_widget' => '<div id="%1$s" class="aside-menu-item">',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="title-decoration">',
+            'before_title'  => '<h3 class="title-decoration fw-bold">',
             'after_title'   => '</h3>'
         )
     );
