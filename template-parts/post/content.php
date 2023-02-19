@@ -66,7 +66,6 @@
     </div><!-- .post-content -->
 
     <div class="post-tags text-start" title="Tags">
-        <span class="fw-bold">Tags: </span>
         <?php
         $tags = get_the_tags();
         foreach ($tags as $tag) {
