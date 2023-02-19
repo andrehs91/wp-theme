@@ -322,7 +322,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
     margin: 0 !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .nav-link {
         margin-top: 0;
         margin-left: 0.5rem;

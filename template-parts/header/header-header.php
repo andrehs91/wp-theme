@@ -11,7 +11,7 @@
 
 ?>
 
-<nav class="header-nav navbar navbar-dark navbar-expand-lg">
+<nav class="header-nav navbar navbar-dark navbar-expand-md">
     <div class="brand">
         <a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     </div>
