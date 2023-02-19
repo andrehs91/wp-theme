@@ -133,6 +133,10 @@ footer {
     margin-bottom: 1rem;
 }
 
+main article p:last-of-type {
+    margin: 0;
+}
+
 .title-decoration {
     width: fit-content;
     margin-top: -0.5rem;
