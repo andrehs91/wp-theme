@@ -20,22 +20,11 @@
     endif;
     ?>
     <div class="post-header">
-        <div class="post-category">
-            <div class="alert alert-primary m-0 px-3 py-2 d-inline-block">
-                <?php
-                    $categories = get_the_category();
-                    foreach ($categories as $category) {
-                        $category_link = get_category_link($category);
-                        echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
-                    }
-                ?>
-            </div>
-        </div><!-- .post-category -->
         <?php the_title( '<h1 class="post-title text-primary mb-3 mb-md-4" title="Título da publicação">', '</h1>' ); ?>
         <div class="post-author-date">
             <?= larissa_post_author(); ?>
             <?= larissa_post_date(); ?>
-        </div><!-- .post-author-date -->
+        </div>
     </div><!-- .post-header -->
 
     <div class="my-3 my-md-4">
@@ -65,7 +54,18 @@
         ?>
     </div><!-- .post-content -->
 
+    <div class="post-category text-start">
+        <span class="fw-bold">Categorias: </span>
+        <?php
+        $categories = get_the_category();
+        foreach ($categories as $category) {
+            $category_link = get_category_link($category);
+            echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
+        }
+        ?>
+    </div><!-- .post-category -->
     <div class="post-tags text-start" title="Tags">
+        <span class="fw-bold">Tags: </span>
         <?php
         $tags = get_the_tags();
         foreach ($tags as $tag) {
