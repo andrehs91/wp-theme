@@ -21,6 +21,7 @@ get_header();
 
 <main class="col-12 col-lg-9 content">
     <?php
+    if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' );
     while ( have_posts() ) :
         the_post();
         get_template_part( 'template-parts/page/content', 'page' );
@@ -29,6 +30,7 @@ get_header();
             comments_template();
         endif;
     endwhile; // End the loop.
+    if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' );
     ?>
 </main>
 <aside class="col-12 col-lg-3 ps-lg-4">
