@@ -325,11 +325,9 @@ a.tag-cloud-link[style*="font-size: 2"] {
 @media (min-width: 768px) {
     .nav-link {
         margin-top: 0;
+        margin-left: 0.5rem;
         color: rgba(255, 255, 255, 1);
         border-radius: 0.5rem;
-    }
-    .nav-link:not(:first-of-type) {
-        margin-left: 0.5rem;
     }
 
     .brand a {
