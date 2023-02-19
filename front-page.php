@@ -17,7 +17,6 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-    <div class="alert alert-primary" role="alert">front-page.php</div>
     <main id="main" class="site-main">
         <?php
         // Show the selected front page content.

@@ -20,7 +20,6 @@ get_header();
 ?>
 
 <main class="col-12 col-lg-9 content">
-    <div class="alert alert-primary" role="alert">page.php</div>
     <div class="mb-3 mb-md-4">
         <?php if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' ); ?>
     </div>

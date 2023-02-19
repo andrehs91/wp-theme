@@ -14,8 +14,7 @@
 get_header();
 ?>
 
-<main class="col-12 col-lg-9 pb-0 pb-lg-4">
-    <div class="alert alert-primary" role="alert">search.php</div>
+<main class="col-12 col-lg-9">
     <?php
     if ( have_posts() ) :
     ?>
