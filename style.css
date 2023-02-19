@@ -267,18 +267,21 @@ footer {
     display: flex;
     justify-content: center;
     align-content: center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
-.pagination a {
+.pagination .page-numbers {
+    display: inline-block;
+    min-width: 2ch;
     color: var(--bs-primary);
     text-decoration: none;
 }
-.pagination a:hover {
+.pagination .page-numbers:hover {
     font-weight: bold;
 }
 .pagination .icon {
     max-width: 2rem;
     max-height: 2rem;
+    fill: var(--bs-primary);
 }
 
 /* Tag Cloud **********************************************************************************************************/
