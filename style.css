@@ -263,6 +263,12 @@ footer {
     font-size: 2rem;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 /* Tag Cloud **********************************************************************************************************/
 a.tag-cloud-link[style*="font-size: 8"],
 a.tag-cloud-link[style*="font-size: 9"],
