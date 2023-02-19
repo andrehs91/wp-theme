@@ -20,7 +20,18 @@
     endif;
     ?>
     <div class="post-header">
-        <?php the_title( '<h1 class="post-title text-primary" title="Título da publicação">', '</h1>' ); ?>
+        <div class="post-category">
+            <div class="alert alert-primary m-0 px-3 py-2 d-inline-block">
+                <?php
+                    $categories = get_the_category();
+                    foreach ($categories as $category) {
+                        $category_link = get_category_link($category);
+                        echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
+                    }
+                ?>
+            </div>
+        </div>
+        <?php the_title( '<h1 class="post-title text-primary mb-3 mb-md-4" title="Título da publicação">', '</h1>' ); ?>
         <div class="post-author-date">
             <?= larissa_post_author(); ?>
             <?= larissa_post_date(); ?>
