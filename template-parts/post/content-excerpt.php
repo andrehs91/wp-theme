@@ -27,16 +27,12 @@
             ?>
         </div>
     </span>
+    <div class="text-end">
+        <?= larissa_post_author(); ?>
+        <?= larissa_post_date(); ?>
+    </div>
     <?php the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-    <?php if ( 'post' === get_post_type() ) : ?>
-        <div class="text-right">
-            <?= larissa_post_author(); ?>
-            <?= larissa_post_date(); ?>
-        </div>
-        <?php larissa_edit_link();?>
-    <?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
-        <?php larissa_edit_link(); ?>
-    <?php endif; ?>
+    <?php larissa_edit_link();?>
     <div class="post-content">
         <?php the_excerpt(); ?>
     </div>
