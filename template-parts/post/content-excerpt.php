@@ -17,13 +17,15 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-excerpt">
     <span class="post-category">
-        <?php
+        <div class="alert alert-primary m-0">
+            <?php
             $categories = get_the_category();
             foreach ($categories as $category) {
                 $category_link = get_category_link($category);
                 echo '<a href="' . esc_url($category_link) . '" title="Categoria ' . esc_attr($category->name) . '">' . esc_html($category->name) . '</a>';
             }
-        ?>
+            ?>
+        </div>
     </span>
     <?php the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
     <?php if ( 'post' === get_post_type() ) : ?>
