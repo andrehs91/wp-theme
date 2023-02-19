@@ -27,6 +27,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--bs-dark);
     min-height: 100vh;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
