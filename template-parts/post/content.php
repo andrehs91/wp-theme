@@ -19,30 +19,15 @@
         echo larissa_get_svg( array( 'icon' => 'thumb-tack' ) );
     endif;
     ?>
-    <header class="entry-header">
-        <?php
-        if ( 'post' === get_post_type() ) {
-            echo '<div class="entry-meta">';
-            if ( is_single() ) {
-                larissa_posted_on();
-            } else {
-                echo larissa_post_date();
-                larissa_edit_link();
-            }
-            echo '</div><!-- .entry-meta -->';
-        }
+    <div class="post-header">
+        <?php the_title( '<h1 class="post-title" title="Título da publicação">', '</h1>' ); ?>
+        <div class="post-author-date">
+            <?= larissa_post_author(); ?>
+            <?= larissa_post_date(); ?>
+        </div>
+    </div><!-- .post-header -->
 
-        if ( is_single() ) {
-            the_title( '<h1 class="entry-title">', '</h1>' );
-        } elseif ( is_front_page() && is_home() ) {
-            the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-        } else {
-            the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-        }
-        ?>
-    </header><!-- .entry-header -->
-
-    <div class="mb-3 mb-md-4">
+    <div class="my-3 my-md-4">
         <?php if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' ); ?>
     </div>
 
@@ -81,7 +66,7 @@
     }
     ?>
 
-    <div class="mt-3 mt-md-4">
+    <div class="my-3 my-md-4">
         <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
     </div>
 
