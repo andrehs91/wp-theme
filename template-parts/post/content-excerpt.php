@@ -17,7 +17,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-excerpt">
     <?php if ( 'post' === get_post_type() ) : ?>
-        <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column-reverse flex-sm-row justify-content-between">
             <div class="post-author-date">
                 <?= larissa_post_author(); ?>
                 <?= larissa_post_date(); ?>
