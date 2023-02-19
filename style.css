@@ -312,6 +312,9 @@ a.tag-cloud-link[style*="font-size: 2"] {
     font-size: 1.4rem !important;
 }
 /* Tag Cloud **********************************************************************************************************/
+.wp-widget-group__inner-blocks ul {
+    margin: 0 !important;
+}
 
 @media (min-width: 992px) {
     .nav-link {

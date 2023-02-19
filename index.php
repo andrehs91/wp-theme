@@ -37,8 +37,8 @@ get_header();
         endwhile;
         the_posts_pagination(
             array(
-                'prev_text'          => '&larr;<span class="screen-reader-text">' . __( 'Previous page', 'larissa' ) . '</span>',
-                'next_text'          => '&rarr;<span class="screen-reader-text">' . __( 'Next page', 'larissa' ) . '</span>',
+                'prev_text'          => larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'larissa' ) . '</span>',
+                'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'larissa' ) . '</span>' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ),
                 'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'larissa' ) . ' </span>',
             )
         );
