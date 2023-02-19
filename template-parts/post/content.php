@@ -58,7 +58,7 @@
         <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
     </div>
 
-    <div class="post-category">
+    <div class="post-category text-start">
         <span class="fw-bold">Categorias: </span>
         <?php
         $categories = get_the_category();
@@ -68,8 +68,8 @@
         }
         ?>
     </div>
-    <div class="post-tags" title="Tags">
-        <span class="fw-bold">Tagss: </span>
+    <div class="post-tags text-start" title="Tags">
+        <span class="fw-bold">Tags: </span>
         <?php
         $tags = get_the_tags();
         foreach ($tags as $tag) {
