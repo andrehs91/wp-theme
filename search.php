@@ -19,6 +19,7 @@ get_header();
         <?php if ( have_posts() ) : ?>
             <h1 class="page-title">
             <?php
+            echo get_post_type();
             /* translators: Search query. */
             printf( __( 'Search Results for: %s', 'larissa' ), '<span>' . get_search_query() . '</span>' );
             ?>
@@ -42,8 +43,8 @@ get_header();
             endwhile; // End the loop.
             the_posts_pagination(
                 array(
-                    'prev_text'          => larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'larissa' ) . '</span>',
-                    'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'larissa' ) . '</span>' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ),
+                    'prev_text'          => '«<span class="screen-reader-text">' . __( 'Previous page', 'larissa' ) . '</span>',
+                    'next_text'          => '»<span class="screen-reader-text">' . __( 'Next page', 'larissa' ) . '</span>',
                     'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'larissa' ) . ' </span>',
                 )
             );

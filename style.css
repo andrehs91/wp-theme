@@ -279,7 +279,7 @@ main article p:last-of-type {
 }
 .pagination .page-numbers {
     display: inline-block;
-    min-width: 2ch;
+    min-width: 2rem;
 }
 .pagination a {
     color: var(--bs-primary);
