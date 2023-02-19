@@ -39,35 +39,14 @@
         </div><!-- .post-thumbnail -->
     <?php endif; ?>
 
-    <div class="entry-content">
-        <?php
-        the_content(
-            sprintf(
-                /* translators: %s: Post title. Only visible to screen readers. */
-                __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'larissa' ),
-                get_the_title()
-            )
-        );
-
-        wp_link_pages(
-            array(
-                'before'      => '<div class="page-links">' . __( 'Pages:', 'larissa' ),
-                'after'       => '</div>',
-                'link_before' => '<span class="page-number">',
-                'link_after'  => '</span>',
-            )
-        );
-        ?>
-    </div><!-- .entry-content -->
+    <div class="my-3 my-md-4">
+        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
+    </div>
 
     <?php
     if ( is_single() ) {
         larissa_entry_footer();
     }
     ?>
-
-    <div class="my-3 my-md-4">
-        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
-    </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
