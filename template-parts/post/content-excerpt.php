@@ -17,7 +17,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-excerpt">
     <span class="post-category">
-        <div class="alert alert-primary m-0">
+        <div class="alert alert-primary m-0 p-2 d-inline-block">
             <?php
             $categories = get_the_category();
             foreach ($categories as $category) {
