@@ -17,7 +17,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="post-excerpt">
     <span class="post-category">
-        <div class="alert alert-primary m-0 p-2 d-inline-block">
+        <div class="alert alert-primary m-0 px-3 py-2 d-inline-block">
             <?php
             $categories = get_the_category();
             foreach ($categories as $category) {
@@ -29,7 +29,7 @@
     </span>
     <?php the_title( sprintf( '<h2 class="post-title" title="Título da publicação"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
     <?php if ( 'post' === get_post_type() ) : ?>
-        <div>
+        <div class="text-right">
             <?= larissa_post_author(); ?>
             <?= larissa_post_date(); ?>
         </div>
