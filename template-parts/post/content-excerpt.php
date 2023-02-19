@@ -43,7 +43,7 @@
             $tags = get_the_tags();
             foreach ($tags as $tag) {
                 $tag_link = get_the_tags($tag);
-                echo '<a href="' . esc_url($tag_link) . '" title="Categoria ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
+                echo '<a href="' . esc_url($tag_link) . '" title="Marcação ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
             }
         ?>
     </div>
