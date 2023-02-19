@@ -274,10 +274,10 @@ footer {
     display: inline-block;
     min-width: 2ch;
 }
-.pagination .page-numbers {
+.pagination a {
     color: var(--bs-primary);
 }
-.pagination .page-numbers:hover {
+.pagination a:hover {
     font-weight: bold;
     text-decoration: none;
 }
