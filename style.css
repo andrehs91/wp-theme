@@ -68,6 +68,9 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Pacifico', cursive; font-weight: 800;}
     margin: 0 0 1rem 0;
     font-size: 2rem;
 }
+.header-search {
+    z-index: 1;
+}
 
 .brand {
     position: relative;

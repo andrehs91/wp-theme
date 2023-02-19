@@ -51,4 +51,6 @@
         <h1>Resultados da busca por: <?= get_search_query(); ?></h1>
     </div>
 <?php endif; ?>
-<?php get_search_form(); ?>
+<div class="header-search container">
+    <?php get_search_form(); ?>
+</div>
