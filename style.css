@@ -209,7 +209,7 @@ main article p:last-of-type {
 .post-tags {
     margin-bottom: 1rem;
 }
-.post-content p {
+.post-content p:last-of-type {
   margin: 0 !important;
 }
 .post-tags a {
