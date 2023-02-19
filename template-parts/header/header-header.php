@@ -35,8 +35,15 @@
         <h1>Início</h1>
         <span><?= get_bloginfo( 'description', 'display' ); ?></span>
     </div>
-<?php elseif ( is_page() || is_archive() ) : ?>
+<?php elseif ( is_page() ) : ?>
     <div class="header-title">
         <h1><?= get_the_title(); ?></h1>
+    </div>
+<?php elseif ( is_archive() ) : ?>
+    <div class="header-title">
+        <?php
+            the_archive_title( '<h1>', '</h1>' );
+            the_archive_description( '<span>', '</span>' );
+        ?>
     </div>
 <?php endif; ?>
