@@ -15,6 +15,7 @@ get_header();
 ?>
 
 <main class="col-12 col-lg-9">
+    <div class="alert alert-primary" role="alert">archive.php</div>
     <?php if ( have_posts() ) : ?>
     <header class="page-header">
         <?php
