@@ -64,16 +64,19 @@
         }
         ?>
     </div><!-- .post-category -->
-    <div class="post-tags text-start" title="Tags">
-        <span class="fw-bold">Tags: </span>
-        <?php
-        $tags = get_the_tags();
-        foreach ($tags as $tag) {
-            $tag_link = get_the_tags($tag);
-            echo '<a href="' . esc_url($tag_link) . '" title="Tag ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
-        }
-        ?>
-    </div><!-- .post-tags -->
+
+    <?php if ( get_the_tags() ) : ?>
+        <div class="post-tags text-start" title="Tags">
+            <span class="fw-bold">Tags: </span>
+            <?php
+                $tags = get_the_tags();
+                foreach ($tags as $tag) {
+                    $tag_link = get_tag_link($tag);
+                    echo '<a href="' . esc_url($tag_link) . '" title="Tag ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
+                }
+            ?>
+        </div><!-- .post-tags -->
+    <?php endif; ?>
 
     <div class="my-3 my-md-4">
         <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
