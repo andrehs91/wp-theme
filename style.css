@@ -480,7 +480,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 
 /* Comments ***********************************************************************************************************/
 
-.comment-list,
+/* .comment-list,
 .comment-list .children {
     list-style: none;
     margin: 0;
@@ -543,7 +543,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .comment-awaiting-moderation {
     color: #606060;
     font-style: italic;
-}
+} */
 
 /* Comments ***********************************************************************************************************/
 
