@@ -497,8 +497,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .comment-author .avatar {
     height: 3rem;
     width: 3rem;
-    left: -4rem;
-    border: solid 1px var(--bs-primary);
+    left: -5rem;
     border-radius: 0.5rem;
     position: absolute;
 }
@@ -530,7 +529,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
     text-align: right;
 }
 .children .comment-body {
-    margin-left: 6.5rem;
+    margin-left: 7rem;
 }
 .comment-reply-link {
     position: relative;
@@ -538,7 +537,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .children .comment-author .avatar {
     height: 2rem;
     width: 2rem;
-    left: -2.5rem;
+    left: -3.5rem;
 }
 .no-comments,
 .comment-awaiting-moderation {
