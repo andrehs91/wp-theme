@@ -33,7 +33,7 @@ if ( post_password_required() ) {
             <?php if ( 1 === absint( get_comments_number() ) ) {
                 echo '1 Comentário';
             } else {
-                echo absint( get_comments_number() ) . ' Comentário';
+                echo absint( get_comments_number() ) . ' Comentários';
             } ?>
         </h2>
         <ol class="comment-list">
