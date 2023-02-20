@@ -510,8 +510,8 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .comment-metadata {
     color: #707070;
     font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.20rem;
+    font-weight: bold;
+    letter-spacing: 0.10rem;
 }
 .comment-metadata a {
     color: #707070;
@@ -523,6 +523,9 @@ a.tag-cloud-link[style*="font-size: 2"] {
 }
 .comment-body .reply {
     text-align: right;
+}
+.children .comment-body {
+    margin-left: 6.5rem;
 }
 .comment-reply-link {
     position: relative;
