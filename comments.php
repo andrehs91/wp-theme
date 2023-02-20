@@ -42,7 +42,7 @@ if ( post_password_required() ) {
                         'avatar_size' => 100,
                         'style'       => 'ol',
                         'short_ping'  => true,
-                        'reply_text'  => comment_reply_link(),
+                        'reply_text'  => 'Responder',
                     )
                 );
             ?>
