@@ -30,10 +30,10 @@ if ( post_password_required() ) {
     if ( have_comments() ) :
         ?>
         <h2 class="comments-title">
-            <?php if ( 1 === absint( get_comments_number() ) ) {
-                echo '1 Comentário';
-            } else {
+            <?php if ( absint( get_comments_number() > 1 ) ) {
                 echo absint( get_comments_number() ) . ' Comentários';
+            } else {
+                echo absint( get_comments_number() ) . ' Comentário';
             } ?>
         </h2>
         <ol class="comment-list">
