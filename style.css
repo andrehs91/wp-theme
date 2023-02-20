@@ -366,9 +366,7 @@ main article p:last-of-type {
     border: 0 solid;
     float: left;
     height: 1em;
-    margin-left: -1.5em;
     margin-top: 0.25em;
-    print-color-adjust: exact;
     vertical-align: top;
     width: 1em;
 }
