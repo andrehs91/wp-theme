@@ -14,11 +14,6 @@
  * @version 1.0
  */
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
 if ( post_password_required() ) {
     return;
 }
@@ -42,7 +37,7 @@ if ( post_password_required() ) {
                         'avatar_size' => 100,
                         'style'       => 'ol',
                         'short_ping'  => true,
-                        'reply_text'  => 'Responder',
+                        'reply_text'  => twentyseventeen_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'twentyseventeen' )
                     )
                 );
             ?>
