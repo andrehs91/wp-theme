@@ -40,15 +40,12 @@
     <div class="post-content">
         <?php the_excerpt(); ?>
     </div>
-    <?php if ( 'post' === get_post_type() ) : ?>
+    <?php if ( 'post' === get_post_type() && get_the_tags() ) : ?>
         <div class="post-tags" title="Tags">
             <?php
-                echo '<pre>';
-                var_dump(get_the_tags());
-                echo '</pre>';
                 $tags = get_the_tags();
                 foreach ($tags as $tag) {
-                    $tag_link = get_the_tags($tag);
+                    $tag_link = get_tag_link($tag);
                     echo '<a href="' . esc_url($tag_link) . '" title="Tag ' . esc_attr($tag->name) . '">#' . esc_html($tag->name) . '</a>';
                 }
             ?>
