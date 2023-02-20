@@ -43,6 +43,9 @@
     <?php if ( 'post' === get_post_type() ) : ?>
         <div class="post-tags" title="Tags">
             <?php
+                echo '<pre>';
+                var_dump(get_the_tags());
+                echo '</pre>';
                 $tags = get_the_tags();
                 foreach ($tags as $tag) {
                     $tag_link = get_the_tags($tag);
