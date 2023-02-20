@@ -45,9 +45,9 @@ if ( post_password_required() ) {
                         'reply_text'  => 'Responder',
                     )
                 );
-                echo '<pre>'
+                echo '<pre>Teste: ';
                 comment_reply_link();
-                echo '</pre>'
+                echo '</pre>';
             ?>
         </ol>
         <?php
