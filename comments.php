@@ -42,7 +42,7 @@ if ( post_password_required() ) {
                         'avatar_size' => 100,
                         'style'       => 'ol',
                         'short_ping'  => true,
-                        'reply_text'  => larissa_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'larissa' ),
+                        'reply_text'  => 'Responder',
                     )
                 );
             ?>
