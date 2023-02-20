@@ -543,8 +543,12 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .comment-respond {
     margin: 1rem 0;
 }
-.comment-reply-title small {
+/* .comment-reply-title small {
     position: absolute;
+    margin-left: 1rem;
+} */
+.comment-reply-title small {
+    background-color: #ffffff;
     margin-left: 1rem;
 }
 
