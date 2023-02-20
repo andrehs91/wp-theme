@@ -26,7 +26,6 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
     <?php
-    // You can start editing here -- including this comment!
     if ( have_comments() ) :
         ?>
         <h3 class="comments-title title-decoration">
@@ -51,15 +50,14 @@ if ( post_password_required() ) {
         <?php
         the_comments_pagination(
             array(
-                'prev_text' => larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'larissa' ) . '</span>',
-                'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'larissa' ) . '</span>' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ),
+                'prev_text' => '«<span class="screen-reader-text">Anterior</span>',
+                'next_text' => '»<span class="screen-reader-text">Próximo</span>'
             )
         );
-    endif; // Check for have_comments().
-    // If comments are closed and there are comments, let's leave a little note, shall we?
+    endif;
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'larissa' ); ?></p>
+        <p class="no-comments">Os comentários estão fechados.</p>
         <?php
     endif;
     comment_form();
