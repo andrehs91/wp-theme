@@ -417,34 +417,11 @@ add_action( 'wp_head', 'larissa_colors_css_wrap' );
  * Enqueues scripts and styles.
  */
 function larissa_scripts() {
-
-    // Load the html5 shiv.
-    wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '20161020' );
-    wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-    wp_enqueue_script( 'larissa-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '20161114', true );
-
-    $larissa_l10n = array(
-        'quote' => larissa_get_svg( array( 'icon' => 'quote-right' ) ),
-    );
-
-    if ( has_nav_menu( 'top' ) ) {
-        wp_enqueue_script( 'larissa-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210122', true );
-        $larissa_l10n['expand']   = __( 'Expand child menu', 'larissa' );
-        $larissa_l10n['collapse'] = __( 'Collapse child menu', 'larissa' );
-        $larissa_l10n['icon']     = larissa_get_svg(
-            array(
-                'icon'     => 'angle-down',
-                'fallback' => true,
-            )
-        );
-    }
+    wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20221101' );
 
     wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
 
     wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.3', true );
-
-    wp_localize_script( 'larissa-skip-link-focus-fix', 'larissaScreenReaderText', $larissa_l10n );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
