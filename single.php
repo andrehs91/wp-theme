@@ -24,8 +24,8 @@ get_header();
         endif;
         the_post_navigation(
             array(
-                'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'larissa' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-                'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'larissa' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'larissa' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . larissa_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+                'prev_text' => '<span class="screen-reader-text">' . __( 'Postagem anterior', 'larissa' ) . '</span><span class="nav-title">«%title</span>',
+                'next_text' => '<span class="screen-reader-text">' . __( 'Próxima postagem', 'larissa' ) . '</span><span class="nav-title">%title»</span>',
             )
         );
     endwhile;
