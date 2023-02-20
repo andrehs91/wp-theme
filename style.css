@@ -387,7 +387,7 @@ main article p:last-of-type {
     display: inline !important;
 }
 .form-submit {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem !important;
 }
 .comment-form input[type=submit] {
     --bs-btn-active-bg: #574077;
