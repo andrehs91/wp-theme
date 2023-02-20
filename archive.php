@@ -24,9 +24,9 @@ get_header();
         endwhile;
         the_posts_pagination(
             array(
-                'prev_text'          => '«<span class="screen-reader-text">' . __( 'Previous page', 'larissa' ) . '</span>',
-                'next_text'          => '»<span class="screen-reader-text">' . __( 'Next page', 'larissa' ) . '</span>',
-                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'larissa' ) . ' </span>',
+                'prev_text'          => '«<span class="screen-reader-text">' . __( 'Página anterior', 'larissa' ) . '</span>',
+                'next_text'          => '»<span class="screen-reader-text">' . __( 'Próxima página', 'larissa' ) . '</span>',
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Página', 'larissa' ) . ' </span>'
             )
         );
     else :

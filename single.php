@@ -24,8 +24,9 @@ get_header();
         endif;
         the_post_navigation(
             array(
-                'prev_text' => '<span class="screen-reader-text">' . __( 'Postagem anterior', 'larissa' ) . '</span><span class="nav-title">«%title</span>',
-                'next_text' => '<span class="screen-reader-text">' . __( 'Próxima postagem', 'larissa' ) . '</span><span class="nav-title">%title»</span>',
+                'screen_reader_text' => 'Navegação entre postagens',
+                'prev_text'          => '<span class="screen-reader-text">' . __( 'Postagem anterior', 'larissa' ) . '</span><span class="nav-title">« Postagem Anterior<br>%title</span>',
+                'next_text'          => '<span class="screen-reader-text">' . __( 'Próxima postagem', 'larissa' ) . '</span><span class="nav-title">Próxima Postagem »<br>%title</span>',
             )
         );
     endwhile;
