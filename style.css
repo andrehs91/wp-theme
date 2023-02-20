@@ -249,10 +249,6 @@ main article p:last-of-type {
     display: block;
     font-style: italic;
 }
-.post-navigation .nav-links {
-    display: flex;
-    justify-content: space-between;
-}
 .nav-previous,
 .nav-next {
     width: 100%;
@@ -529,9 +525,14 @@ a.tag-cloud-link[style*="font-size: 2"] {
     .pagination {
         padding-bottom: 2rem;
     }
-
+    
     .comments-area {
         padding-bottom: 2rem;
+    }
+    
+    .post-navigation .nav-links {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
