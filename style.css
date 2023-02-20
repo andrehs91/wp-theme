@@ -332,6 +332,13 @@ main article p:last-of-type {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     width: 100%;
 }
+.comment-form textarea:focus {
+    color: #212529;
+    background-color: #e5e3e8;
+    border-color: #b6a8ca;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(109, 80, 149, 0.25);
+}
 
 /* Tag Cloud **********************************************************************************************************/
 a.tag-cloud-link[style*="font-size: 8"],
