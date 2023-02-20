@@ -29,13 +29,13 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) :
         ?>
-        <h2 class="comments-title title-decoration">
+        <h3 class="comments-title title-decoration">
             <?php if ( absint( get_comments_number() > 1 ) ) {
                 echo absint( get_comments_number() ) . ' Comentários';
             } else {
                 echo absint( get_comments_number() ) . ' Comentário';
             } ?>
-        </h2>
+        </h3>
         <ol class="comment-list">
             <?php
                 wp_list_comments(
