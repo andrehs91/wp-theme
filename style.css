@@ -386,6 +386,9 @@ main article p:last-of-type {
 .comment-form-cookies-consent label {
     display: inline !important;
 }
+.form-submit {
+    margin-top: 0.5rem;
+}
 .comment-form input[type=submit] {
     --bs-btn-active-bg: #574077;
     --bs-btn-active-border-color: #523c70;
