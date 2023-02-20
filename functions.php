@@ -417,7 +417,19 @@ add_action( 'wp_head', 'larissa_colors_css_wrap' );
  * Enqueues scripts and styles.
  */
 function larissa_scripts() {
+    // // Add custom fonts, used in the main stylesheet.
+    // wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
+
+    // Theme stylesheet.
     wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20221101' );
+
+    // Theme block stylesheet.
+    wp_enqueue_style( 'larissa-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'larissa-style' ), '20220912' );
+
+    // Load the dark colorscheme.
+    if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
+        wp_enqueue_style( 'larissa-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'larissa-style' ), '20191025' );
+    }
 
     wp_enqueue_script( 'larissa-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '20211130', true );
 
