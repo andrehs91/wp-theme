@@ -505,6 +505,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 }
 .comment-meta {
     margin-bottom: 1rem;
+    padding: 0;
 }
 .comment-metadata {
     color: #707070;
@@ -527,7 +528,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .children .comment-author .avatar {
     height: 2rem;
     width: 2rem;
-    left: 2.5rem;
+    left: -2.5rem;
 }
 .no-comments,
 .comment-awaiting-moderation {
