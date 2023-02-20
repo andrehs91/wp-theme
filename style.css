@@ -254,7 +254,6 @@ main article p:last-of-type {
 }
 .nav-previous,
 .nav-next {
-    display: inline-flex;
     width: 100%;
 }
 .nav-next {
