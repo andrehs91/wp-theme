@@ -146,7 +146,8 @@ main article p:last-of-type {
     margin: 0;
 }
 
-.title-decoration {
+.title-decoration,
+.reply-title {
     width: fit-content;
     margin-top: -0.5rem;
     margin-bottom: 1rem;
