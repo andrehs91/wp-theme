@@ -42,12 +42,9 @@ if ( post_password_required() ) {
                         'avatar_size' => 100,
                         'style'       => 'ol',
                         'short_ping'  => true,
-                        'reply_text'  => 'Responder',
+                        'reply_text'  => comment_reply_link(),
                     )
                 );
-                echo '<pre>Teste: ';
-                comment_reply_link();
-                echo '</pre>';
             ?>
         </ol>
         <?php
