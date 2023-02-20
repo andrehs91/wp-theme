@@ -29,7 +29,7 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) :
         ?>
-        <h2 class="comments-title">
+        <h2 class="comments-title title-decoration">
             <?php if ( absint( get_comments_number() > 1 ) ) {
                 echo absint( get_comments_number() ) . ' Comentários';
             } else {
