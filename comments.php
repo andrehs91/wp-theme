@@ -30,26 +30,11 @@ if ( post_password_required() ) {
     if ( have_comments() ) :
         ?>
         <h2 class="comments-title">
-            <?php
-            $comments_number = get_comments_number();
-            if ( '1' === $comments_number ) {
-                /* translators: %s: Post title. */
-                printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'larissa' ), get_the_title() );
+            <?php if ( 1 === absint( get_comments_number() ) ) {
+                echo '1 Comentário';
             } else {
-                printf(
-                    /* translators: 1: Number of comments, 2: Post title. */
-                    _nx(
-                        '%1$s Reply to &ldquo;%2$s&rdquo;',
-                        '%1$s Replies to &ldquo;%2$s&rdquo;',
-                        $comments_number,
-                        'comments title',
-                        'larissa'
-                    ),
-                    number_format_i18n( $comments_number ),
-                    get_the_title()
-                );
-            }
-            ?>
+                echo absint( get_comments_number() ) . ' Comentário';
+            } ?>
         </h2>
         <ol class="comment-list">
             <?php
