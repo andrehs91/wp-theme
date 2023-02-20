@@ -248,6 +248,20 @@ main article p:last-of-type {
     display: block;
     font-style: italic;
 }
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-previous,
+.nav-next {
+    display: inline-flex;
+    width: 100%;
+}
+.nav-next {
+    text-align: end;
+}
+
+
 
 .social-media {
     font-weight: bold;
