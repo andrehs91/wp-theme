@@ -311,7 +311,10 @@ main article p:last-of-type {
 }
 
 .comment-form p {
-    margin: 0 !important;
+    margin: 0;
+}
+.comment-form .comment-notes {
+    margin-bottom: 1rem;
 }
 .comment-form label {
     display: inline-block;
