@@ -64,11 +64,10 @@ function larissa_setup() {
     // Set the default content width.
     $GLOBALS['content_width'] = 525;
 
-    // This theme uses wp_nav_menu() in two locations.
+    // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
         array(
-            'top'    => __( 'Menu Superior', 'larissa' ),
-            'social' => __( 'Social Links Menu', 'larissa' ),
+            'top'    => __( 'Menu Superior', 'larissa' )
         )
     );
 
@@ -143,18 +142,7 @@ function larissa_setup() {
                 'text_business_info',
                 'search',
                 'text_about',
-            ),
-
-            // Add the core-defined business info widget to the footer 1 area.
-            'sidebar-2' => array(
-                'text_business_info',
-            ),
-
-            // Put two core-defined widgets in the footer 2 area.
-            'sidebar-3' => array(
-                'text_about',
-                'search',
-            ),
+            )
         ),
 
         // Specify the core-defined pages to create and add custom thumbnails to some of them.
@@ -370,42 +358,6 @@ function larissa_widgets_init() {
             'description'   => __( 'Rodapé.', 'larissa' ),
             'before_widget' => '<div class="container">',
             'after_widget'  => '</div>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __( 'Footer 1', 'larissa' ),
-            'id'            => 'sidebar-2',
-            'description'   => __( 'Add widgets here to appear in your footer.', 'larissa' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __( 'Footer 2', 'larissa' ),
-            'id'            => 'sidebar-3',
-            'description'   => __( 'Add widgets here to appear in your footer.', 'larissa' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>'
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name'          => __( 'Footer 2', 'larissa' ),
-            'id'            => 'sidebar-3',
-            'description'   => __( 'Add widgets here to appear in your footer.', 'larissa' ),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
         )
     );
 }
