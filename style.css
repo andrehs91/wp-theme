@@ -339,7 +339,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
 
 /* Comments ***********************************************************************************************************/
 
-/* .comment-list,
+.comment-list,
 .comment-list .children {
     list-style: none;
     margin: 0;
@@ -402,9 +402,9 @@ a.tag-cloud-link[style*="font-size: 2"] {
 .comment-awaiting-moderation {
     color: #606060;
     font-style: italic;
-} */
+}
 
-/* .comments-area {
+.comments-area {
     padding-bottom: 1rem;
 }
 .comment-form p {
@@ -542,7 +542,7 @@ a.tag-cloud-link[style*="font-size: 2"] {
     background-color: var(--bs-btn-hover-bg);
     border-color: var(--bs-btn-hover-border-color);
     text-decoration: none;
-} */
+}
 
 /* Comments ***********************************************************************************************************/
 
