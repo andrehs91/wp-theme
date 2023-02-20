@@ -417,29 +417,6 @@ add_action( 'wp_head', 'larissa_colors_css_wrap' );
  * Enqueues scripts and styles.
  */
 function larissa_scripts() {
-    // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style( 'larissa-fonts', larissa_fonts_url(), array(), null );
-
-    // Theme stylesheet.
-    wp_enqueue_style( 'larissa-style', get_stylesheet_uri(), array(), '20221101' );
-
-    // Theme block stylesheet.
-    wp_enqueue_style( 'larissa-block-style', get_theme_file_uri( '/assets/css/blocks.css' ), array( 'larissa-style' ), '20220912' );
-
-    // Load the dark colorscheme.
-    if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-        wp_enqueue_style( 'larissa-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'larissa-style' ), '20191025' );
-    }
-
-    // Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-    if ( is_customize_preview() ) {
-        wp_enqueue_style( 'larissa-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'larissa-style' ), '20161202' );
-        wp_style_add_data( 'larissa-ie9', 'conditional', 'IE 9' );
-    }
-
-    // Load the Internet Explorer 8 specific stylesheet.
-    wp_enqueue_style( 'larissa-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'larissa-style' ), '20161202' );
-    wp_style_add_data( 'larissa-ie8', 'conditional', 'lt IE 9' );
 
     // Load the html5 shiv.
     wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '20161020' );
