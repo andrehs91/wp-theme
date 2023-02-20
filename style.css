@@ -310,6 +310,9 @@ main article p:last-of-type {
     text-decoration: none;
 }
 
+.comment-form p {
+    margin: 0 !important;
+}
 .comment-form label {
     display: inline-block;
     margin-bottom: 0.5rem;
