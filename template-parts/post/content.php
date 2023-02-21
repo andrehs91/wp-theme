@@ -27,9 +27,11 @@
         </div>
     </div><!-- .post-header -->
 
-    <div class="my-3 my-md-4">
-        <?php if ( is_active_sidebar( 'anuncio-superior' ) ) dynamic_sidebar( 'anuncio-superior' ); ?>
-    </div>
+    <?php if ( is_active_sidebar( 'anuncio-superior' ) ) : ?>
+        <div class="my-3 my-md-4">
+        <?php dynamic_sidebar( 'anuncio-superior' ); ?>
+        </div>
+    <?php endif; ?>
 
     <?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
         <div class="post-thumbnail">
@@ -78,8 +80,10 @@
         </div><!-- .post-tags -->
     <?php endif; ?>
 
-    <div class="my-3 my-md-4">
-        <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) dynamic_sidebar( 'anuncio-inferior' ); ?>
-    </div>
+    <?php if ( is_active_sidebar( 'anuncio-inferior' ) ) : ?>
+        <div class="my-3 my-md-4">
+        <?php dynamic_sidebar( 'anuncio-inferior' ); ?>
+        </div>
+    <?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
